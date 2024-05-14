@@ -10,27 +10,38 @@ public class ClickAndMove : MonoBehaviour
 
     public LayerMask whatCanBeClickedOn;
 
-    public AnimatorController ArturoAnim;
+    public Animator ArturoAnim;
 
     private NavMeshAgent Arturo;
 
-    
 
-    void Start(){
+
+    void Start()
+    {
         Arturo = GetComponent<NavMeshAgent>();
+        ArturoAnim = GetComponent<Animator>();
     }
 
-    void Update(){
-        if (Input.GetMouseButtonDown(1)) {
-            Ray movementRay = Camera.main.ScreenPointToRay (Input.mousePosition);
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(1))
+        {
+            Ray movementRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit rayHitInfo;
 
-            if (Physics.Raycast(movementRay,out rayHitInfo, 100, whatCanBeClickedOn)) {
-                Arturo.SetDestination (rayHitInfo.point);
-                //ArturoAnim.set
-
+            if (Physics.Raycast(movementRay, out rayHitInfo, 100, whatCanBeClickedOn))
+            {
+                Arturo.SetDestination(rayHitInfo.point);
             }
         }
+
+
+        if(Arturo.remainingDistance>=0.1){
+            ArturoAnim.SetBool("walkb", true);
+        }else{
+            ArturoAnim.SetBool("walkb", false);
+        }
+
     }
 
 }
