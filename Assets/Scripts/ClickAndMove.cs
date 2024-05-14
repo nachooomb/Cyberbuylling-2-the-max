@@ -14,6 +14,11 @@ public class ClickAndMove : MonoBehaviour
 
     private NavMeshAgent Arturo;
 
+    float lookRotationSpeed = 8f;
+
+    [SerializeField] ParticleSystem clickEffect;
+
+
 
 
     void Start()
@@ -32,7 +37,12 @@ public class ClickAndMove : MonoBehaviour
             if (Physics.Raycast(movementRay, out rayHitInfo, 100, whatCanBeClickedOn))
             {
                 Arturo.SetDestination(rayHitInfo.point);
+                if(clickEffect != null)
+                {Instantiate(clickEffect, rayHitInfo.point += new Vector3(0, 0.1f, 0), clickEffect.transform.rotation); }
             }
+
+            FaceTarget();
+            
         }
 
 
@@ -41,6 +51,15 @@ public class ClickAndMove : MonoBehaviour
         }else{
             ArturoAnim.SetBool("walkb", false);
         }
+
+    }
+
+    void FaceTarget()
+    {
+        Vector3 direction = (Arturo.destination - transform.position).normalized;
+        Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
+        transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * lookRotationSpeed);
+    
 
     }
 

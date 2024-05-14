@@ -2672,7 +2672,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 98e3bd5738f97aa459c4ce28d26d34d5, type: 2}
+      objectReference: {fileID: 9100000, guid: 34cb38c045d36624dbdbe299fd550c71, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c29591c2b9d1f64d95eb50af300e7d5, type: 3}
 --- !u!1001 &1240199247
@@ -4605,7 +4605,7 @@ CapsuleCollider:
   m_GameObject: {fileID: 1986745969}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   m_Radius: 0.5
   m_Height: 1.8185354
   m_Direction: 1
@@ -4620,10 +4620,10 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 99999
+  m_Speed: 2.5
+  m_Acceleration: 3.4028235e+38
   avoidancePriority: 50
-  m_AngularSpeed: 0
+  m_AngularSpeed: 3.4028235e+38
   m_StoppingDistance: 0
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 0
@@ -4639,7 +4639,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1986745969}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1698d3fbf58b7e34e974afe2517b064a, type: 3}
   m_Name: 
@@ -4648,6 +4648,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   ArturoAnim: {fileID: 9100000, guid: 34cb38c045d36624dbdbe299fd550c71, type: 2}
+  clickEffect: {fileID: 1822003327637089907, guid: 6dfc6df185692564d9af112953c9611e,
+    type: 3}
 --- !u!54 &1986745977
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4671,7 +4673,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1986745969}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e8db56b5598c53c429b685782af39ccb, type: 3}
   m_Name: 
