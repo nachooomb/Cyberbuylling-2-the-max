@@ -34,6 +34,8 @@ public class ClickAndMove : MonoBehaviour
             Ray movementRay = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit rayHitInfo;
 
+            
+
             if (Physics.Raycast(movementRay, out rayHitInfo, 100, whatCanBeClickedOn))
             {
                 Arturo.SetDestination(rayHitInfo.point);

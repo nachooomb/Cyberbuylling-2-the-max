@@ -1,5 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -13,13 +16,15 @@ public class trigger_zone : MonoBehaviour
 
     public UnityEvent  onTriggerEnter;
     public UnityEvent  onTriggerExit;
+
+
     private void OnTriggerEnter( Collider col)
     {
         if (alreadyEntered)
         {
             return;
         } 
-        
+       
         if (!string.IsNullOrEmpty(collisionTag) && !col.CompareTag(collisionTag))
         {
             return;
