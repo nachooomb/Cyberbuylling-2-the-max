@@ -3,7 +3,22 @@ guid: 5035c606a56fd614c859d39f7f8ec873
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: suelo apartamento normal
+    second: {fileID: 2800000, guid: c4a19aca7b26ff04b9dbff03549736a7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: "suelo_apartamento Ba\xF1o2"
+    second: {fileID: 2800000, guid: cf7a094da39745648b8929196a8df5c3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: suelo_apartamentpng
+    second: {fileID: 2800000, guid: 7eb25878bb587c24d8cb3697e3edec52, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
