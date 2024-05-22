@@ -41,6 +41,7 @@ public class ClickAndMove : MonoBehaviour
                 Arturo.SetDestination(rayHitInfo.point);
                 if(clickEffect != null)
                 {Instantiate(clickEffect, rayHitInfo.point += new Vector3(0, 0.1f, 0), clickEffect.transform.rotation); }
+                //destroy click effect
             }
 
             FaceTarget();
