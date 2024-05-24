@@ -10,5 +10,6 @@ public class item : ScriptableObject
     public string description;
     public int valueDMG;
     public Sprite iconSprite;
+    public string itemType;
 
 }

@@ -17,3 +17,4 @@ MonoBehaviour:
   description: 
   valueDMG: 20
   iconSprite: {fileID: 21300000, guid: ed54affc4c6a85c449011d03ed419e5a, type: 3}
+  itemType: Arrojable

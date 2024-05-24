@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Nevera
   m_EditorClassIdentifier: 
   id: 1
-  itemName: nevera
+  itemName: Nevera
   description: 
   valueDMG: 50
   iconSprite: {fileID: 21300000, guid: 74c1c01bd8d1ba24993b2c7f495b30e2, type: 3}
+  itemType: Arrojable
