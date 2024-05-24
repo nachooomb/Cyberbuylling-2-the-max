@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: edd19201a120c284faaf9c6bc8ced256
+guid: 80d1d06a3f4c1d14b9491a82bffdb87f
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: folletotext
+    second: {fileID: 2800000, guid: 8f2073a361bcc0643aae23a583c815aa, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 5ddf3b94502ad4d469791792a9a89937
+guid: d0eac0bf31331f2498c61eebfe697422
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: lata uv
+    second: {fileID: 2800000, guid: 04721ba03d305ad48b9c5f0a42dce277, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

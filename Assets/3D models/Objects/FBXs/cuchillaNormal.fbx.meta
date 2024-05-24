@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: 568e36629d58fcb40a495a8eafeb0a71
+guid: e3c756e610acfb548adb462e6854cfbc
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: cuchilla 1
+    second: {fileID: 2800000, guid: 7b00e2bff151cbe4595619eeb31543db, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
