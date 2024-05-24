@@ -12,7 +12,7 @@ public class ClickAndMove : MonoBehaviour
 
     public Animator ArturoAnim;
 
-    private NavMeshAgent Arturo;
+    private NavMeshAgent ArturoNavMesh;
 
     float lookRotationSpeed = 8f;
 
@@ -23,7 +23,7 @@ public class ClickAndMove : MonoBehaviour
 
     void Start()
     {
-        Arturo = GetComponent<NavMeshAgent>();
+        ArturoNavMesh = GetComponent<NavMeshAgent>();
         ArturoAnim = GetComponent<Animator>();
     }
 
@@ -38,7 +38,7 @@ public class ClickAndMove : MonoBehaviour
 
             if (Physics.Raycast(movementRay, out rayHitInfo, 100, whatCanBeClickedOn))
             {
-                Arturo.SetDestination(rayHitInfo.point);
+                ArturoNavMesh.SetDestination(rayHitInfo.point);
                 if(clickEffect != null)
                 {Instantiate(clickEffect, rayHitInfo.point += new Vector3(0, 0.1f, 0), clickEffect.transform.rotation); }
                 //destroy click effect
@@ -49,7 +49,7 @@ public class ClickAndMove : MonoBehaviour
         }
 
 
-        if(Arturo.remainingDistance>=0.1){
+        if(ArturoNavMesh.remainingDistance>=0.1){
             ArturoAnim.SetBool("walkb", true);
         }else{
             ArturoAnim.SetBool("walkb", false);
@@ -59,11 +59,16 @@ public class ClickAndMove : MonoBehaviour
 
     void FaceTarget()
     {
-        Vector3 direction = (Arturo.destination - transform.position).normalized;
+        Vector3 direction = (ArturoNavMesh.destination - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
         transform.rotation = Quaternion.Slerp(transform.rotation, lookRotation, Time.deltaTime * lookRotationSpeed);
     
 
+    }
+
+    public void GoDestination(Vector3 destinationPoint) 
+    {
+        ArturoNavMesh.SetDestination(destinationPoint);
     }
 
 }
