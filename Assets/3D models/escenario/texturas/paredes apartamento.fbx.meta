@@ -13,7 +13,7 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: paredes_apartamento_textura
-    second: {fileID: 2800000, guid: fb6ab19628d00664bae8dfba16b6c8f2, type: 3}
+    second: {fileID: 2800000, guid: 33f4773fd8e395841b09a628115e8577, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

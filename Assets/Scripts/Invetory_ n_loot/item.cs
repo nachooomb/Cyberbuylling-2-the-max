@@ -11,5 +11,6 @@ public class item : ScriptableObject
     public int valueDMG;
     public Sprite iconSprite;
     public string itemType;
+    public GameObject Objeto;
 
 }

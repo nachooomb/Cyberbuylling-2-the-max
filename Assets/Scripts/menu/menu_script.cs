@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class menu_script : MonoBehaviour
 {
 
-    private bool aimState = false;
+    private bool State = false;
     Animator _animatorMenu;
     // Start is called before the first frame update
     void Start()
@@ -24,15 +24,8 @@ public class menu_script : MonoBehaviour
     public void toggleMenu()
     {
         
-        aimState = !aimState;
+        State = !State;
             
-            _animatorMenu.SetBool("Toggle_menu",aimState);
-        
-        
-        // if (_animatorMenu.GetBool("Toggle_menu") == true && Input.GetMouseButtonDown(0))
-        // {
-        //     _animatorMenu.SetBool("Toggle_menu",false);
-        //     Debug.Log("click");
-        // }
+            _animatorMenu.SetBool("Toggle_menu",State);
     }
 }

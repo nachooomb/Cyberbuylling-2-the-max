@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: material_yerik Base Color
-    second: {fileID: 2800000, guid: 8c0bc50ab441f8440befb86d23404a27, type: 3}
+    second: {fileID: 2800000, guid: a70e318f44fe3724294ca0eded871b2d, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
