@@ -7,16 +7,17 @@ using UnityEngine.InputSystem;
 public class item_throw : MonoBehaviour
 {
 
+    private int contador = 0;
+
 
     public Transform cam;
     public Transform attackPoint;
     public GameObject objectToThrow;
-    public List<item> objectsToThrow;
 
     public int totalThrows;
     public float throwCooldown;
 
-    public KeyCode throwKey =KeyCode.Mouse0; 
+    public KeyCode throwKey = KeyCode.Mouse0; 
     public float throwForce;
     public float throwUpwardForce;
 
@@ -24,25 +25,38 @@ public class item_throw : MonoBehaviour
 
     void Start()
     {
-        readyToThrow = true;
+        readyToThrow = true;    
     }
 
     // Update is called once per frame
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.H) && contador<=InventoryManager.Instance.Items.Count-1) 
+        {
+            contador++; 
+        } else if (contador == InventoryManager.Instance.Items.Count){
+            contador = 0;
+        }
+
+        // if (Input.GetKeyDown(KeyCode.G) && contador>= 0)
+        // {
+        //     contador --;
+        // } else if  (contador<0)
+        // {
+        //     contador = InventoryManager.Instance.Items.Count-1;
+        // }
+
+        Debug.Log("contador " + contador);
+        Debug.Log("largo de la lista " + InventoryManager.Instance.Items.Count);
+
+
+        objectToThrow = InventoryManager.Instance.Items[contador].Objeto;
+
         if (Input.GetKeyDown(throwKey) && readyToThrow && totalThrows > 0) 
         {
             Throw();
         }
-
-
-        Vector3 rayDirection = Input.mousePosition - attackPoint.position;
-
-
-        Debug.DrawRay(attackPoint.position, rayDirection*100, Color.green);
-
-
-        
     }
 
     private void Throw()
@@ -50,7 +64,7 @@ public class item_throw : MonoBehaviour
         readyToThrow = false;
 
         // instancia el objeto a lanazar
-        GameObject proyectile = Instantiate(objectToThrow, attackPoint.position, cam.rotation);
+        GameObject proyectile = Instantiate(objectToThrow, attackPoint.position, attackPoint.rotation);
 
         //get rigid body component
         Rigidbody proyectileRB = proyectile.GetComponent<Rigidbody>();
@@ -77,9 +91,9 @@ public class item_throw : MonoBehaviour
 
         totalThrows --;
 
-        Debug.Log(forceDirection);
+        //Debug.Log(forceDirection);
 
-        Debug.DrawRay(attackPoint.position, hit.point, Color.green);
+        //Debug.DrawRay(attackPoint.position, hit.point, Color.green);
 
 
         //implement throwCooldown

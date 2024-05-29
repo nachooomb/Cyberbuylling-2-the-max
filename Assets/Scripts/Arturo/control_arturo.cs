@@ -28,10 +28,7 @@ public class control_arturo : MonoBehaviour
     void Update()
     {
         //activar y desactivar el movimiento
-        if (Input.GetKeyDown(KeyCode.M)){
-            ToggleMove();
-            ToggleShoot();
-        }
+        //SwitchModes();
         
     }
 
@@ -59,5 +56,14 @@ public class control_arturo : MonoBehaviour
             clickAndShoot.enabled = false;
             item_Throw.enabled = false;
         }
+    }
+
+    public void SwitchModes()
+    {
+       if (Input.GetKeyDown(KeyCode.M)){
+            ToggleMove();
+            ToggleShoot();
+        } 
+        
     }
 }

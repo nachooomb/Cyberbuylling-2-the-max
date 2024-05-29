@@ -13,14 +13,21 @@ public class InventoryManager : MonoBehaviour
 
     public List<item> Items = new List<item>();
 
+    public control_arturo _control_arturo;
+
     private void Awake()
     {
         Instance = this;
     }
+
+    void Start()
+    {
+        _control_arturo = GameObject.Find("Arturo").GetComponent<control_arturo>();
+    }
      public void AddItem(item item)
-     {
+    {
             Items.Add(item);
-     } 
+    } 
 
      public void RemoveItem(item item)
      {
@@ -40,14 +47,30 @@ public class InventoryManager : MonoBehaviour
         foreach (var item in Items)
         {
             GameObject obj = Instantiate(InventoryItem, ItemContent);
-            Debug.Log(item);
+            //Debug.Log(item);
             
             obj.transform.Find("item_icon").GetComponent<Image>().sprite = item.iconSprite;
             // var iconSprite = obj.transform.Find("iconSprite").GetComponent<Image>();
             obj.transform.Find("item_name").GetComponent<TextMeshProUGUI>().text = item.itemName;
             // iconSprite.sprite = item.iconSprite; 
+
+            //_item_Throw.objectsToThrow = item.Objeto;
+            
         }
      } 
+
+     public void ableToFigth()
+     {
+        _control_arturo.SwitchModes();
+     }
+
+     void Update(){
+        
+        if (Items.Count >= 2){
+            ableToFigth();
+        }
+        
+     }
 }
 
 
