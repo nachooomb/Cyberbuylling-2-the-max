@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: lata uv
-    second: {fileID: 2800000, guid: 04721ba03d305ad48b9c5f0a42dce277, type: 3}
+    second: {fileID: 2800000, guid: 22bc499390ebb994b84a9f4974f0eb10, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
