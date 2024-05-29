@@ -7,7 +7,8 @@ using UnityEngine.InputSystem;
 public class item_throw : MonoBehaviour
 {
 
-    private int contador = 0;
+    public int contador = 0;
+    
 
 
     public Transform cam;
@@ -47,8 +48,8 @@ public class item_throw : MonoBehaviour
         //     contador = InventoryManager.Instance.Items.Count-1;
         // }
 
-        Debug.Log("contador " + contador);
-        Debug.Log("largo de la lista " + InventoryManager.Instance.Items.Count);
+        //Debug.Log("contador " + contador);
+        //Debug.Log("largo de la lista " + InventoryManager.Instance.Items.Count);
 
 
         objectToThrow = InventoryManager.Instance.Items[contador].Objeto;
