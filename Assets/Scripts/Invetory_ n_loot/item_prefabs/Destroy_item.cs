@@ -14,7 +14,7 @@ public class Destroy_item : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        TimeDestroy();
+        //TimeDestroy();
         //OnCollisionEnter(Collision col);
     }
 
