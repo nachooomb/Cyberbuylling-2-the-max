@@ -38,7 +38,6 @@ public class Destroy_item : MonoBehaviour
         {
             Debug.Log("hola " + Time.time);
             Destroy(gameObject);
-            //hola
         }
     }
 }
