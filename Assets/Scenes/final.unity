@@ -11885,39 +11885,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 244149250000167495}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2047417173 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1126477848789648454, guid: e878d7261bf45d2438830929e6f62366,
-    type: 3}
-  m_PrefabInstance: {fileID: 244149250000167495}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2047417183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2047417173}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e795398999e56c40a1ef4a8d6da49b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Item: {fileID: 11400000, guid: 2567802037ee52d42a1674d70c4ff2c9, type: 2}
-  Arturo: {fileID: 0}
---- !u!65 &2047417185
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2047417173}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 2.132106}
-  m_Center: {x: 0, y: -4.577959e-16, z: 1.0322143}
 --- !u!1 &2085794689
 GameObject:
   m_ObjectHideFlags: 0
@@ -12370,6 +12337,17 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 6592502953697812644, guid: e878d7261bf45d2438830929e6f62366,
+        type: 3}
+      propertyPath: Item
+      value: 
+      objectReference: {fileID: 11400000, guid: 2567802037ee52d42a1674d70c4ff2c9,
+        type: 2}
+    - target: {fileID: 6592502953697812644, guid: e878d7261bf45d2438830929e6f62366,
+        type: 3}
+      propertyPath: Arturo
+      value: 
+      objectReference: {fileID: 1211851990}
     - target: {fileID: 6737546938231515230, guid: e878d7261bf45d2438830929e6f62366,
         type: 3}
       propertyPath: m_Layer
@@ -12483,6 +12461,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999296268079437958, guid: bef5d5840ee09334d97e3e3936e703d2,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.0022589918
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999296268079437958, guid: bef5d5840ee09334d97e3e3936e703d2,
+        type: 3}
+      propertyPath: m_Center.x
+      value: 0.0000000017695129
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999296268079437958, guid: bef5d5840ee09334d97e3e3936e703d2,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.0000029099174
+      objectReference: {fileID: 0}
+    - target: {fileID: 7999296268079437958, guid: bef5d5840ee09334d97e3e3936e703d2,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.0011189202
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bef5d5840ee09334d97e3e3936e703d2, type: 3}

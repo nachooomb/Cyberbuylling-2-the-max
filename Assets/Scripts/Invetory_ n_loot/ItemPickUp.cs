@@ -29,9 +29,8 @@ public class ItemPickUp : MonoBehaviour
         clickAndMove.GoDestination(transform.position);
         //Debug.Log( "hola");
         PickUp();
-        
     }
-
+//corrutina
     // void Update()
     // {
     //     if (Input.GetMouseButtonDown(0))
