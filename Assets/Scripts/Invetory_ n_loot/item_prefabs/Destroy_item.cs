@@ -20,7 +20,7 @@ public class Destroy_item : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        Debug.Log("choque " + col.gameObject.name);
+        //Debug.Log("choque " + col.gameObject.name);
 
         if (col.gameObject.name == "Yerik_3D" ){
             Destroy(gameObject);
@@ -44,7 +44,7 @@ public class Destroy_item : MonoBehaviour
     IEnumerator timeCorrutina()
     { 
         yield return new WaitForSeconds(2.0f);
-        Debug.Log("hola");
+        //Debug.Log("hola");
         Destroy(gameObject);
     }
 }
