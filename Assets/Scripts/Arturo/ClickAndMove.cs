@@ -69,6 +69,13 @@ public class ClickAndMove : MonoBehaviour
     public void GoDestination(Vector3 destinationPoint) 
     {
         ArturoNavMesh.SetDestination(destinationPoint);
+        //FaceTarget();
+
+        if(ArturoNavMesh.remainingDistance>=0.1){
+            ArturoAnim.SetBool("walkb", true);
+        }else{
+            ArturoAnim.SetBool("walkb", false);
+        }
     }
 
 }

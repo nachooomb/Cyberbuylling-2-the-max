@@ -56,5 +56,7 @@ public class trigger_zone : MonoBehaviour
         {
             alreadyExited = true;
         }
+
+        //Debug.Log(col.name);
     }
 }
