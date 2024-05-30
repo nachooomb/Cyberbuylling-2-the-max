@@ -28,23 +28,16 @@ public class Destroy_item : MonoBehaviour
 
         if (col.gameObject.name == "paredes_rellano" || col.gameObject.name == "suelo_rellano")
         {
-            StartCoroutine(timeCorrutina());
+            TimeDestroy();
         }
     }
 
-    // void TimeDestroy()
-    // {
-    //     if (Time.time >= time+timeDestroy)
-    //     {
-    //         Debug.Log("hola " + Time.time);
-    //         Destroy(gameObject);
-    //     }
-    // }
-
-    IEnumerator timeCorrutina()
-    { 
-        yield return new WaitForSeconds(2.0f);
-        Debug.Log("hola");
-        Destroy(gameObject);
+    void TimeDestroy()
+    {
+        if (Time.time >= time+timeDestroy)
+        {
+            Debug.Log("hola " + Time.time);
+            Destroy(gameObject);
+        }
     }
 }
