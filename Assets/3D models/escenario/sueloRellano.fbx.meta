@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: suelo_rellano
-    second: {fileID: 2800000, guid: 68f3b4ef42885a34f9b769b6e6025080, type: 3}
+    second: {fileID: 2800000, guid: b1e2b5f54e9ec3f4593ba341a9343290, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
