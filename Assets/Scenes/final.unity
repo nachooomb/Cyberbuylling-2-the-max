@@ -687,6 +687,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 91709331}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &91709333 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d0eac0bf31331f2498c61eebfe697422,
+    type: 3}
+  m_PrefabInstance: {fileID: 91709331}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &91709334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 91709333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Latas Wonstew
+    sentences:
+    - "\xA1Un trago de Wonstew y a seguir explorando uwu!"
 --- !u!4 &109988892 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e3c756e610acfb548adb462e6854cfbc,
@@ -1962,6 +1984,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &275618232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275618226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: "V\xE1ter"
+    sentences:
+    - "Aqu\xED es donde la sucede magia... o algo as\xED"
 --- !u!1 &286214400
 GameObject:
   m_ObjectHideFlags: 3
@@ -9632,6 +9670,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1537228500}
   m_Mesh: {fileID: 977852060943915527, guid: 8dc7824a9a6bdfd41a14dea214fdebe7, type: 3}
+--- !u!114 &1537228504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537228500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Cama
+    sentences:
+    - "\xBFQui\xE9n necesita una cama limpia cuando tienes esta?"
 --- !u!1001 &1596637013
 PrefabInstance:
   m_ObjectHideFlags: 0
