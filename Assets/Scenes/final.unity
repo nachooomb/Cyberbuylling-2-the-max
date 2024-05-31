@@ -192,14 +192,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48060437}
-  m_LocalRotation: {x: 0.42042455, y: 0.5685448, z: 0.5685448, w: -0.42042458}
-  m_LocalPosition: {x: 0.218, y: -0.048, z: 0.01}
+  m_LocalRotation: {x: -0.7610025, y: 0.25951242, z: 0.5598344, w: -0.20028466}
+  m_LocalPosition: {x: -0.12, y: 0.146, z: -0.038}
   m_LocalScale: {x: 2.5, y: 2.5, z: 8.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 91709332}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 252.96399}
+  m_LocalEulerAnglesHint: {x: -180.817, y: 72.964, z: 38.265}
 --- !u!23 &48060439
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -456,7 +456,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Planta sospechosamente verde
+    name: Planta verde?
     sentences:
     - Falsa, pero siempre en su mejor momento.
 --- !u!1001 &91709331
@@ -1366,6 +1366,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fbe1510376a89641a2922090be29d24, type: 3}
+--- !u!1 &193178739 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3fbe1510376a89641a2922090be29d24,
+    type: 3}
+  m_PrefabInstance: {fileID: 193178738}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &196149959
 GameObject:
   m_ObjectHideFlags: 0
@@ -2929,6 +2935,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ea141802fa08b24685a573c956afdce, type: 3}
+--- !u!4 &362526724 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0ea141802fa08b24685a573c956afdce,
+    type: 3}
+  m_PrefabInstance: {fileID: 362526723}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &397500202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3797,6 +3809,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &424977068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424977062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Microondas
+    sentences:
+    - "El microondas: el h\xE9roe silencioso del estudiante."
 --- !u!1 &432290280 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 27a97df352e0f2b4c892e2165f1b4280,
@@ -4915,6 +4943,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3c756e610acfb548adb462e6854cfbc, type: 3}
+--- !u!1 &639198742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e3c756e610acfb548adb462e6854cfbc,
+    type: 3}
+  m_PrefabInstance: {fileID: 639198741}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &639198743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639198742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Cuchilla
+    sentences:
+    - "\xA1Una cuchilla nueva! Guardada para una ocasi\xF3n especial, supongo."
+--- !u!4 &652124503 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d05d37d9cd0262f4bba51477b77254b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1800459854}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &665254958
 GameObject:
   m_ObjectHideFlags: 3
@@ -5059,6 +5115,22 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 193178738}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &764360050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193178739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Planta seca
+    sentences:
+    - La pobre nunca tuvo una oportunidad
 --- !u!1001 &766975606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8617,12 +8689,17 @@ PrefabInstance:
     - target: {fileID: -1042450742308218266, guid: 8a7bac9fc80dce046b5d87b351ab7a18,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.04
+      value: -3.43
       objectReference: {fileID: 0}
     - target: {fileID: -1042450742308218266, guid: 8a7bac9fc80dce046b5d87b351ab7a18,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.48
+      value: 1.78
+      objectReference: {fileID: 0}
+    - target: {fileID: -1042450742308218266, guid: 8a7bac9fc80dce046b5d87b351ab7a18,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1042450742308218266, guid: 8a7bac9fc80dce046b5d87b351ab7a18,
         type: 3}
@@ -8776,6 +8853,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a7bac9fc80dce046b5d87b351ab7a18, type: 3}
+--- !u!1 &1326912347 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8a7bac9fc80dce046b5d87b351ab7a18,
+    type: 3}
+  m_PrefabInstance: {fileID: 1326912346}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1330461094 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3f5bfec113145b24ea18bc821bc6d0c5,
@@ -10275,6 +10358,22 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1326912346}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1640555786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326912347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Basura
+    sentences:
+    - "Esta pila de basura podr\xEDa tener su propio ecosistema."
 --- !u!1 &1642936434
 GameObject:
   m_ObjectHideFlags: 0
@@ -12933,7 +13032,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2010919968}
   m_LocalRotation: {x: -0.57171476, y: -0.41610378, z: -0.41610375, w: 0.57171464}
-  m_LocalPosition: {x: 0.29800004, y: -0.049, z: -0.03200029}
+  m_LocalPosition: {x: -0.573, y: -0.08, z: -0.163}
   m_LocalScale: {x: 2.5, y: 2.5, z: 8.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13182,13 +13281,13 @@ Transform:
   - {fileID: 764360049}
   - {fileID: 1316445166}
   - {fileID: 1027801849}
-  - {fileID: 325924273}
+  - {fileID: 652124503}
   - {fileID: 91709332}
   - {fileID: 523303387}
   - {fileID: 217519778}
   - {fileID: 109988892}
   - {fileID: 344108991}
-  - {fileID: 2138261906}
+  - {fileID: 362526724}
   - {fileID: 1330461094}
   - {fileID: 795444454}
   - {fileID: 585019028}
