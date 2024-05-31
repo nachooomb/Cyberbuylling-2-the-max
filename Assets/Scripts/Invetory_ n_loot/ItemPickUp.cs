@@ -20,8 +20,8 @@ public class ItemPickUp : MonoBehaviour
     {
         Arturo = GameObject.Find ("Arturo");
         clickAndMove = Arturo.GetComponent<ClickAndMove>();
-        ArturoNavMesh = GetComponent<NavMeshAgent>();
-        ArturoAnim = GetComponent<Animator>();
+        ArturoNavMesh = Arturo.GetComponent<NavMeshAgent>();
+        ArturoAnim = Arturo.GetComponent<Animator>();
     }
 
     void PickUp()
@@ -34,11 +34,12 @@ public class ItemPickUp : MonoBehaviour
     private void OnMouseDown()
     {
         clickAndMove.GoDestination(transform.position);
-        if(ArturoNavMesh.remainingDistance>=0.5){
+        if(ArturoNavMesh.remainingDistance>=0.1){
             ArturoAnim.SetBool("walkb", true);
-        }else{
+        }else if (ArturoNavMesh.remainingDistance<0.000001){
             ArturoAnim.SetBool("walkb", false);
             PickUp();
+            Debug.Log("dejo de andar y pillo el objeto");
         }
         //Debug.Log( "hola");
     }
