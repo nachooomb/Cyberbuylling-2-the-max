@@ -4700,6 +4700,12 @@ RectTransform:
     type: 3}
   m_PrefabInstance: {fileID: 3679559089128603800}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &755950269 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1682525129474311248, guid: e329e94f8a8b09f438e5fef477929294,
+    type: 3}
+  m_PrefabInstance: {fileID: 397500202}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &764360049 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3fbe1510376a89641a2922090be29d24,
@@ -13520,6 +13526,11 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3055983857382952854, guid: bef5d5840ee09334d97e3e3936e703d2,
+        type: 3}
+      propertyPath: Arturo
+      value: 
+      objectReference: {fileID: 755950269}
     - target: {fileID: 7999296268079437958, guid: bef5d5840ee09334d97e3e3936e703d2,
         type: 3}
       propertyPath: m_Size.z
