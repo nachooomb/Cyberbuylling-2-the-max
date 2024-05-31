@@ -13,4 +13,6 @@ public class item : ScriptableObject
     public string itemType;
     public GameObject Objeto;
 
+    public string mensage;
+
 }
