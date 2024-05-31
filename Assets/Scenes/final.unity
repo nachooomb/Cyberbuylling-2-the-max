@@ -3056,7 +3056,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: c585ec1f890bc4c4bb25b0c678528149,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.05
+      value: 0.98
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c585ec1f890bc4c4bb25b0c678528149,
         type: 3}
@@ -3688,12 +3688,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 13d02acc6d992004299f7171241b2277,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.63
+      value: 5.36
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 13d02acc6d992004299f7171241b2277,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12
+      value: 1.35
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 13d02acc6d992004299f7171241b2277,
         type: 3}
@@ -5316,9 +5316,76 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Cuchilla
+    name: Arturo
     sentences:
     - "\xA1Una cuchilla nueva! Guardada para una ocasi\xF3n especial, supongo."
+--- !u!114 &639198746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639198742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07f5504684542314391ee0c419b0855b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &639198747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639198742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c9b41bf8c196bd4b9e37b713f7d4cb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: 6b91a116fba0d1a48822852bc6229436, type: 2}
+--- !u!114 &639198748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639198742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e795398999e56c40a1ef4a8d6da49b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Item: {fileID: 11400000, guid: 6b91a116fba0d1a48822852bc6229436, type: 2}
+  Arturo: {fileID: 1211851990}
+  ArturoAnim: {fileID: 0}
+--- !u!114 &639198749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639198742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Arturo: {fileID: 0}
+  ArturoAnim: {fileID: 0}
+--- !u!65 &639198750
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639198742}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.01917652, y: 0.02000001, z: 0.022919666}
+  m_Center: {x: -0.0006797926, y: 0.00000011891995, z: 0.0007456252}
 --- !u!1 &665254958
 GameObject:
   m_ObjectHideFlags: 3
@@ -9349,9 +9416,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Platos sucios
+    name: Arturo
     sentences:
     - Estos platos necesitan un milagro.
+--- !u!114 &1330461096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520907550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Arturo: {fileID: 0}
+  ArturoAnim: {fileID: 0}
+--- !u!65 &1330461097
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520907550}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.024370674, y: 0.024617584, z: 0.019320672}
+  m_Center: {x: -0.000000059474342, y: 0.000000014510427, z: -0.0027252778}
 --- !u!1 &1357869470
 GameObject:
   m_ObjectHideFlags: 0
@@ -10000,10 +10094,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Armario
+    name: Arturo
     sentences:
     - 'El armario perfecto para esconder... '
     - nada.
+--- !u!114 &1446254190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446254183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Arturo: {fileID: 0}
+  ArturoAnim: {fileID: 0}
+--- !u!65 &1446254191
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446254183}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4090997, y: 1, z: 2.0165641}
+  m_Center: {x: -0.016304553, y: 5.4992157e-15, z: 1.0231078}
 --- !u!1001 &1463647433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10044,7 +10165,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: e5cb14ae113eb404db3929e54ff06aa3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: e5cb14ae113eb404db3929e54ff06aa3,
         type: 3}
@@ -13569,9 +13690,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Escobilla
+    name: Arturo
     sentences:
     - "Mejor no tocarla... no querr\xE1s saber lo que ha visto."
+--- !u!114 &1998443379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998443375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Arturo: {fileID: 0}
+  ArturoAnim: {fileID: 0}
+--- !u!65 &1998443380
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998443375}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.001507729, y: 0.0019122527, z: 0.0027243015}
+  m_Center: {x: -0.000052020514, y: -0.000023223462, z: 0.0013823697}
 --- !u!1 &2010014331
 GameObject:
   m_ObjectHideFlags: 0
@@ -14766,7 +14914,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2189669911267255533}
   m_LocalRotation: {x: 0.521448, y: -0.18460514, z: -0.2333141, w: 0.79973584}
-  m_LocalPosition: {x: -1.4901161e-10, y: -1.8626451e-11, z: 0}
+  m_LocalPosition: {x: -0, y: -0.0001, z: -0.0001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

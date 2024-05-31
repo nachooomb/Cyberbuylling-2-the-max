@@ -15,6 +15,8 @@ public class ItemPickUp : MonoBehaviour
 
     private ClickAndMove clickAndMove;
 
+    private DialogueTrigger dialogueTrigger;
+
 
     void Start ()
     {
@@ -22,6 +24,7 @@ public class ItemPickUp : MonoBehaviour
         clickAndMove = Arturo.GetComponent<ClickAndMove>();
         ArturoNavMesh = Arturo.GetComponent<NavMeshAgent>();
         ArturoAnim = Arturo.GetComponent<Animator>();
+        dialogueTrigger = GetComponent<DialogueTrigger>();
     }
 
     void PickUp()
@@ -38,6 +41,7 @@ public class ItemPickUp : MonoBehaviour
             ArturoAnim.SetBool("walkb", true);
         }else if (ArturoNavMesh.remainingDistance<0.000001){
             ArturoAnim.SetBool("walkb", false);
+            dialogueTrigger.TriggerDialogue();
             PickUp();
             Debug.Log("dejo de andar y pillo el objeto");
         }
