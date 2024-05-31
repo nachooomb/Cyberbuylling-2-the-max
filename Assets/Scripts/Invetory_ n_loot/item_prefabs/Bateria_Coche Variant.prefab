@@ -132,7 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Item: {fileID: 11400000, guid: fa0140ab4d3aa1e418887ccbc23b6c83, type: 2}
-  Arturo: {fileID: 919132149155446097, guid: e329e94f8a8b09f438e5fef477929294, type: 3}
+  Arturo: {fileID: 0}
   ArturoAnim: {fileID: 0}
 --- !u!114 &5372798008333026304
 MonoBehaviour:
