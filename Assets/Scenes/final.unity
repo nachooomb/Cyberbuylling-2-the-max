@@ -4565,6 +4565,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f5bfec113145b24ea18bc821bc6d0c5, type: 3}
+--- !u!1 &520907550 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3f5bfec113145b24ea18bc821bc6d0c5,
+    type: 3}
+  m_PrefabInstance: {fileID: 520907549}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &523303387 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 80d1d06a3f4c1d14b9491a82bffdb87f,
@@ -9329,6 +9335,22 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 520907549}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1330461095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520907550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Platos sucios
+    sentences:
+    - Estos platos necesitan un milagro.
 --- !u!1 &1357869470
 GameObject:
   m_ObjectHideFlags: 0
