@@ -178,6 +178,9 @@ GameObject:
   - component: {fileID: 48060438}
   - component: {fileID: 48060440}
   - component: {fileID: 48060439}
+  - component: {fileID: 48060443}
+  - component: {fileID: 48060442}
+  - component: {fileID: 48060441}
   m_Layer: 0
   m_Name: Cube.002 (1)
   m_TagString: Untagged
@@ -250,6 +253,49 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 48060437}
   m_Mesh: {fileID: -1550514412580984892, guid: d0eac0bf31331f2498c61eebfe697422, type: 3}
+--- !u!114 &48060441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48060437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Arturo: {fileID: 0}
+  ArturoAnim: {fileID: 0}
+--- !u!65 &48060442
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48060437}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020735497, y: 0.025513798, z: 0.011588439}
+  m_Center: {x: -0.0003678137, y: 0.14243099, z: -0.0036817484}
+--- !u!114 &48060443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 48060437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Arturo
+    sentences:
+    - "\xA1Un twago de Wonstew y a seguiw explowando! uwu"
 --- !u!1 &49016799
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,9 +502,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Planta verde?
+    name: Arturo
     sentences:
     - Falsa, pero siempre en su mejor momento.
+--- !u!114 &54927090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54927086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Arturo: {fileID: 0}
+  ArturoAnim: {fileID: 0}
+--- !u!65 &54927091
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54927086}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.005000001, y: 0.0050000013, z: 0.012065406}
+  m_Center: {x: -0.0000000017268933, y: 0.00026393568, z: 0.004032702}
 --- !u!1001 &91709331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -709,28 +782,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 91709331}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &91709333 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d0eac0bf31331f2498c61eebfe697422,
-    type: 3}
-  m_PrefabInstance: {fileID: 91709331}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &91709334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 91709333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Latas Wonstew
-    sentences:
-    - "\xA1Un twago de Wonstew y a seguiw explowando! uwu"
 --- !u!4 &109988892 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e3c756e610acfb548adb462e6854cfbc,
@@ -2083,9 +2134,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: "V\xE1ter"
+    name: Arturo
     sentences:
     - "Aqu\xED es donde la sucede magia... o algo as\xED"
+--- !u!114 &275618237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275618226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Arturo: {fileID: 0}
+  ArturoAnim: {fileID: 0}
+--- !u!65 &275618238
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275618226}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.43475845, y: 0.74639916, z: 0.71345997}
+  m_Center: {x: -0.00051843, y: -0.040340867, z: 0.4490704}
 --- !u!1 &286214400
 GameObject:
   m_ObjectHideFlags: 3
@@ -3514,12 +3592,12 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 13d02acc6d992004299f7171241b2277,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.22
+      value: 1.63
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 13d02acc6d992004299f7171241b2277,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.43
+      value: 0.12
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 13d02acc6d992004299f7171241b2277,
         type: 3}
@@ -3822,9 +3900,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Microondas
+    name: Arturo
     sentences:
     - "El microondas: el h\xE9roe silencioso del estudiante."
+--- !u!114 &424977073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424977062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Arturo: {fileID: 0}
+  ArturoAnim: {fileID: 0}
+--- !u!65 &424977074
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424977062}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.51325536, y: 0.4269195, z: 0.32718194}
+  m_Center: {x: -0.04196766, y: -0.0020838154, z: 0.16020674}
 --- !u!1 &432290280 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 27a97df352e0f2b4c892e2165f1b4280,
@@ -4092,6 +4197,55 @@ Transform:
   m_Father: {fileID: 1294426766}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &505923417 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -516098083770646512, guid: d0eac0bf31331f2498c61eebfe697422,
+    type: 3}
+  m_PrefabInstance: {fileID: 91709331}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &505923421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505923417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Arturo: {fileID: 0}
+  ArturoAnim: {fileID: 0}
+--- !u!65 &505923422
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505923417}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.021076256, y: 0.021199912, z: 0.010224505}
+  m_Center: {x: -0.00053818664, y: 0.22115208, z: -0.004012932}
+--- !u!114 &505923423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505923417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Arturo
+    sentences:
+    - "\xA1Un twago de Wonstew y a seguiw explowando! uwu"
 --- !u!1001 &509640503
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4711,6 +4865,104 @@ Transform:
   m_Father: {fileID: 1294426766}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 86.126, y: -90, z: -90}
+--- !u!1 &546924961 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7128822646220251771, guid: 8a7bac9fc80dce046b5d87b351ab7a18,
+    type: 3}
+  m_PrefabInstance: {fileID: 1326912346}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &546924965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546924961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Arturo: {fileID: 0}
+  ArturoAnim: {fileID: 0}
+--- !u!65 &546924966
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546924961}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.00465078, y: 0.0028917438, z: 0.005608117}
+  m_Center: {x: -0.002558523, y: -0.00011132804, z: 0.0028030816}
+--- !u!114 &546924967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 546924961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Arturo
+    sentences:
+    - "Esta pila de basura podr\xEDa tener su propio ecosistema."
+--- !u!1 &583119084 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -7146521406498821007, guid: d0eac0bf31331f2498c61eebfe697422,
+    type: 3}
+  m_PrefabInstance: {fileID: 91709331}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &583119088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583119084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Arturo: {fileID: 0}
+  ArturoAnim: {fileID: 0}
+--- !u!65 &583119089
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583119084}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.021430248, y: 0.024077674, z: 0.012068415}
+  m_Center: {x: 1.9973303e-11, y: 0.06775889, z: -0.0034417778}
+--- !u!114 &583119090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 583119084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Arturo
+    sentences:
+    - "\xA1Un twago de Wonstew y a seguiw explowando! uwu"
 --- !u!4 &585019028 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3f5bfec113145b24ea18bc821bc6d0c5,
@@ -4965,12 +5217,6 @@ MonoBehaviour:
     name: Cuchilla
     sentences:
     - "\xA1Una cuchilla nueva! Guardada para una ocasi\xF3n especial, supongo."
---- !u!4 &652124503 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d05d37d9cd0262f4bba51477b77254b1,
-    type: 3}
-  m_PrefabInstance: {fileID: 1800459854}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &665254958
 GameObject:
   m_ObjectHideFlags: 3
@@ -5128,9 +5374,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Planta seca
+    name: Arturo
     sentences:
     - La pobre nunca tuvo una oportunidad
+--- !u!114 &764360053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193178739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Arturo: {fileID: 0}
+  ArturoAnim: {fileID: 0}
+--- !u!65 &764360054
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193178739}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.005, y: 0.005, z: 0.012065402}
+  m_Center: {x: -2.143348e-10, y: 0.00026393964, z: 0.0061086104}
 --- !u!1001 &766975606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5320,6 +5593,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -43943162197020813, guid: 5106d39c7b8d4b149ae026c4ef430166, type: 3}
+--- !u!1 &767946348 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1443732636066871976, guid: 8dc7824a9a6bdfd41a14dea214fdebe7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1903992221}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &767946352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767946348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Arturo: {fileID: 0}
+  ArturoAnim: {fileID: 0}
+--- !u!114 &767946353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767946348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Arturo
+    sentences:
+    - "\xBFQui\xE9n necesita una cama limpia cuando tienes esta?"
+--- !u!65 &767946354
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 767946348}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.018864064, y: 0.015058188, z: 0.008287929}
+  m_Center: {x: 0.0010313392, y: -0.0009322808, z: 0.0043089404}
 --- !u!1 &790856375 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fa9d8617ce66cf043ba432babd5c7670,
@@ -6725,9 +7047,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Espejo
+    name: Arturo
     sentences:
     - El espejo no miente... desafortunadamente.
+--- !u!114 &1033628444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033628441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Arturo: {fileID: 0}
+  ArturoAnim: {fileID: 0}
+--- !u!65 &1033628445
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033628441}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.43612084, y: 0.13199784, z: 0.74156284}
+  m_Center: {x: -0.035551097, y: 0.010064391, z: 0.31019443}
 --- !u!1 &1038685180
 GameObject:
   m_ObjectHideFlags: 0
@@ -8396,9 +8745,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-    name: Planta seca
+    name: Arturo
     sentences:
     - "Quiz\xE1s deber\xEDa probar con cactus."
+--- !u!114 &1299484541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293345970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Arturo: {fileID: 0}
+  ArturoAnim: {fileID: 0}
+--- !u!65 &1299484542
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293345970}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.005, y: 0.0050000013, z: 0.012065405}
+  m_Center: {x: -9.313226e-10, y: 0.000263932, z: 0.0061086137}
 --- !u!1 &1304598526
 GameObject:
   m_ObjectHideFlags: 0
@@ -9022,6 +9398,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -7129324462190329760, guid: c0f0da947cd2059409f472f7919cc9dc, type: 3}
+--- !u!1 &1420281304 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -8391222552659086748, guid: d0eac0bf31331f2498c61eebfe697422,
+    type: 3}
+  m_PrefabInstance: {fileID: 91709331}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &1420281308
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420281304}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.023014983, y: 0.02301498, z: 0.015135789}
+  m_Center: {x: -0.000069570735, y: -0.000000059604645, z: -0.0017911495}
+--- !u!114 &1420281309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420281304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Arturo: {fileID: 0}
+  ArturoAnim: {fileID: 0}
+--- !u!114 &1420281310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420281304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Arturo
+    sentences:
+    - "\xA1Un twago de Wonstew y a seguiw explowando! uwu"
 --- !u!1001 &1425159574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9842,6 +10267,55 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7461263356790374902, guid: c0f0da947cd2059409f472f7919cc9dc, type: 3}
+--- !u!1 &1504905048 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8416272007918961125, guid: d0eac0bf31331f2498c61eebfe697422,
+    type: 3}
+  m_PrefabInstance: {fileID: 91709331}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1504905052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504905048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Arturo: {fileID: 0}
+  ArturoAnim: {fileID: 0}
+--- !u!65 &1504905053
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504905048}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.020735493, y: 0.025513802, z: 0.011588439}
+  m_Center: {x: -0.00036769494, y: 0.14243113, z: -0.0036817547}
+--- !u!114 &1504905054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504905048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Arturo
+    sentences:
+    - "\xA1Un twago de Wonstew y a seguiw explowando! uwu"
 --- !u!1001 &1519998823
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10003,22 +10477,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1537228500}
   m_Mesh: {fileID: 977852060943915527, guid: 8dc7824a9a6bdfd41a14dea214fdebe7, type: 3}
---- !u!114 &1537228504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1537228500}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-    name: Cama
-    sentences:
-    - "\xBFQui\xE9n necesita una cama limpia cuando tienes esta?"
 --- !u!1001 &1596637013
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10358,7 +10816,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1326912346}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1640555786
+--- !u!114 &1640555787
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10367,13 +10825,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1326912347}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
+  m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: Basura
-    sentences:
-    - "Esta pila de basura podr\xEDa tener su propio ecosistema."
+  Arturo: {fileID: 0}
+  ArturoAnim: {fileID: 0}
 --- !u!1 &1642936434
 GameObject:
   m_ObjectHideFlags: 0
@@ -12015,8 +12471,8 @@ MonoBehaviour:
   dialogue:
     name: Arturo
     sentences:
-    - aaaaaaaaaa
-    - papelera
+    - Deberia sacar la basura...
+    - O quizas no.
 --- !u!65 &1803252441
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13017,6 +13473,9 @@ GameObject:
   - component: {fileID: 2010919969}
   - component: {fileID: 2010919971}
   - component: {fileID: 2010919970}
+  - component: {fileID: 2010919974}
+  - component: {fileID: 2010919973}
+  - component: {fileID: 2010919972}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
@@ -13089,6 +13548,49 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2010919968}
   m_Mesh: {fileID: -5495902117074765545, guid: d0eac0bf31331f2498c61eebfe697422, type: 3}
+--- !u!114 &2010919972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010919968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Arturo: {fileID: 0}
+  ArturoAnim: {fileID: 0}
+--- !u!65 &2010919973
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010919968}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.023014992, y: 0.023014994, z: 0.015135793}
+  m_Center: {x: -0.000069689406, y: 6.6638683e-10, z: -0.0017911508}
+--- !u!114 &2010919974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010919968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Arturo
+    sentences:
+    - "\xA1Un twago de Wonstew y a seguiw explowando! uwu"
 --- !u!1001 &2018094998
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13281,7 +13783,7 @@ Transform:
   - {fileID: 764360049}
   - {fileID: 1316445166}
   - {fileID: 1027801849}
-  - {fileID: 652124503}
+  - {fileID: 325924273}
   - {fileID: 91709332}
   - {fileID: 523303387}
   - {fileID: 217519778}
@@ -13597,6 +14099,55 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2090760815}
   m_CullTransparentMesh: 1
+--- !u!1 &2110730175 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3116962752650518778, guid: 8a7bac9fc80dce046b5d87b351ab7a18,
+    type: 3}
+  m_PrefabInstance: {fileID: 1326912346}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2110730179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110730175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Arturo: {fileID: 0}
+  ArturoAnim: {fileID: 0}
+--- !u!65 &2110730180
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110730175}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.003003627, y: 0.0018039033, z: 0.0038432947}
+  m_Center: {x: -0.0063368045, y: 0.000032115153, z: 0.0019562866}
+--- !u!114 &2110730181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110730175}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Arturo
+    sentences:
+    - "Esta pila de basura podr\xEDa tener su propio ecosistema."
 --- !u!1001 &2115329595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13735,12 +14286,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.015, y: 0.007863627, z: 0.0005000001}
   m_Center: {x: 0.000003435649, y: 0.0035509956, z: 0.0093173925}
---- !u!4 &2138261906 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0ea141802fa08b24685a573c956afdce,
-    type: 3}
-  m_PrefabInstance: {fileID: 362526723}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &10632687347213173
 Transform:
   m_ObjectHideFlags: 0
