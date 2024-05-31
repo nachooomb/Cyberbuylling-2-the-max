@@ -34,15 +34,15 @@ public class ItemDialogue : MonoBehaviour
 
     private void OnMouseDown()
     {
-        clickAndMove.GoDestination(transform.position);
-        if(ArturoNavMesh.remainingDistance>=0.5){
-            ArturoAnim.SetBool("walkb", true);
-        }else{
-            ArturoAnim.SetBool("walkb", false);
-            //StartCoroutine(timeCorrutina());
-           dialogueTrigger.TriggerDialogue();
+        //clickAndMove.GoDestination(transform.position);
+        // if(ArturoNavMesh.remainingDistance>=0.5){
+        //     ArturoAnim.SetBool("walkb", true);
+        // }else{
+        //     ArturoAnim.SetBool("walkb", false);
+        //     //StartCoroutine(timeCorrutina());
+        //    dialogueTrigger.TriggerDialogue();
 
-        }
+        // }
     }
 
    /* IEnumerator timeCorrutina()

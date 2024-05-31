@@ -16,6 +16,8 @@ public class ClickAndMove : MonoBehaviour
 
     float lookRotationSpeed = 8f;
 
+    public float distanciaObjeto;
+
     [SerializeField] ParticleSystem clickEffect;
 
 
@@ -48,6 +50,8 @@ public class ClickAndMove : MonoBehaviour
             
         }
 
+        //Debug.Log(distanciaObjeto);
+        distanciaObjeto = ArturoNavMesh.remainingDistance;
 
         if(ArturoNavMesh.remainingDistance>=0.1){
             ArturoAnim.SetBool("walkb", true);
@@ -70,7 +74,6 @@ public class ClickAndMove : MonoBehaviour
     {
         ArturoNavMesh.SetDestination(destinationPoint);
         //FaceTarget();
-
         if(ArturoNavMesh.remainingDistance>=0.1){
             ArturoAnim.SetBool("walkb", true);
         }else{

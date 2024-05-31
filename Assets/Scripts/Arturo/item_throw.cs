@@ -27,17 +27,33 @@ public class item_throw : MonoBehaviour
     void Start()
     {
         readyToThrow = true;    
+        contador = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.H) && contador<=InventoryManager.Instance.Items.Count-1) 
-        {
-            contador++; 
-        } else if (contador == InventoryManager.Instance.Items.Count){
-            contador = 0;
+        if (Input.GetKeyDown(KeyCode.H)){ 
+            Debug.Log("contador I" + contador);
+                
+            if (contador == InventoryManager.Instance.Items.Count){
+                contador = 0;
+            } 
+            
+            objectToThrow = InventoryManager.Instance.Items[contador].Objeto;
+
+            if(contador<=InventoryManager.Instance.Items.Count-1) 
+            {
+                Debug.Log("contador" + contador);
+                Debug.Log("lista" + InventoryManager.Instance.Items.Count);
+                contador++; 
+            } 
+
+            Debug.Log("contador t" + contador);
+    
+
+            
         }
 
         // if (Input.GetKeyDown(KeyCode.G) && contador>= 0)
@@ -52,7 +68,8 @@ public class item_throw : MonoBehaviour
         //Debug.Log("largo de la lista " + InventoryManager.Instance.Items.Count);
 
 
-        objectToThrow = InventoryManager.Instance.Items[contador].Objeto;
+        
+        
 
         if (Input.GetKeyDown(throwKey) && readyToThrow && totalThrows > 0) 
         {
