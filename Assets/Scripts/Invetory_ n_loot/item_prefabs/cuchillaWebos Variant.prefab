@@ -150,6 +150,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Item: {fileID: 11400000, guid: 6b91a116fba0d1a48822852bc6229436, type: 2}
   Arturo: {fileID: 0}
+  ArturoAnim: {fileID: 0}
 --- !u!114 &8401367959830765508
 MonoBehaviour:
   m_ObjectHideFlags: 0
