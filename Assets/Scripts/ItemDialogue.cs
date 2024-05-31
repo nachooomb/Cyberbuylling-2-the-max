@@ -21,8 +21,8 @@ public class ItemDialogue : MonoBehaviour
     {
         Arturo = GameObject.Find ("Arturo");
         clickAndMove = Arturo.GetComponent<ClickAndMove>();
-        ArturoNavMesh = GetComponent<NavMeshAgent>();
-        ArturoAnim = GetComponent<Animator>();
+        ArturoNavMesh = Arturo.GetComponent<NavMeshAgent>();
+        ArturoAnim = Arturo.GetComponent<Animator>();
         dialogueTrigger = GetComponent<DialogueTrigger>();
     }
 
@@ -39,12 +39,17 @@ public class ItemDialogue : MonoBehaviour
             ArturoAnim.SetBool("walkb", true);
         }else{
             ArturoAnim.SetBool("walkb", false);
-            Debug.Log("Hola");
-            dialogueTrigger.TriggerDialogue();
+            //StartCoroutine(timeCorrutina());
+           dialogueTrigger.TriggerDialogue();
 
         }
     }
 
-
+   /* IEnumerator timeCorrutina()
+    { 
+        yield return new WaitForSeconds(2.0f);
+        dialogueTrigger.TriggerDialogue();
+    }
+*/
 
 }

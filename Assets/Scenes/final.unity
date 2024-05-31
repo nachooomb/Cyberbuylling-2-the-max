@@ -2501,6 +2501,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5c0c250f6f0dc3b47a706967ab7ec029, type: 3}
+--- !u!4 &325924273 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d05d37d9cd0262f4bba51477b77254b1,
+    type: 3}
+  m_PrefabInstance: {fileID: 1800459854}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -4168,6 +4174,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1028081193}
     m_Modifications:
+    - target: {fileID: 1773581658659220003, guid: 5ef981daa1f544240bffa2e836d35017,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 196149960}
+    - target: {fileID: 1773581658659220003, guid: 5ef981daa1f544240bffa2e836d35017,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DisplayNextSentence
+      objectReference: {fileID: 0}
     - target: {fileID: 1773581659931912402, guid: 5ef981daa1f544240bffa2e836d35017,
         type: 3}
       propertyPath: m_Name
@@ -9504,6 +9520,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!114 &1446254189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1446254183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Armario
+    sentences:
+    - 'El armario perfecto para esconder... '
+    - nada.
 --- !u!1001 &1463647433
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12082,7 +12115,7 @@ MonoBehaviour:
   dialogue:
     name: Arturo
     sentences:
-    - prueba
+    - aaaaaaaaaa
     - papelera
 --- !u!65 &1803252441
 BoxCollider:
@@ -13027,6 +13060,28 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -3985526238741442058, guid: 5c0c250f6f0dc3b47a706967ab7ec029, type: 3}
+--- !u!1 &1998443375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c0f25d7fa411ffd49a2f321a6afe12bd,
+    type: 3}
+  m_PrefabInstance: {fileID: 1240199247}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1998443378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998443375}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Escobilla
+    sentences:
+    - "Mejor no tocarla... no querr\xE1s saber lo que ha visto."
 --- !u!1 &2010014331
 GameObject:
   m_ObjectHideFlags: 0
@@ -13803,6 +13858,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.015, y: 0.007863627, z: 0.0005000001}
   m_Center: {x: 0.000003435649, y: 0.0035509956, z: 0.0093173925}
+--- !u!4 &2138261906 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0ea141802fa08b24685a573c956afdce,
+    type: 3}
+  m_PrefabInstance: {fileID: 362526723}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &10632687347213173
 Transform:
   m_ObjectHideFlags: 0
