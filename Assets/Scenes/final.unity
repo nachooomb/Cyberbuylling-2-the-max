@@ -1366,6 +1366,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fbe1510376a89641a2922090be29d24, type: 3}
+--- !u!1 &193178739 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3fbe1510376a89641a2922090be29d24,
+    type: 3}
+  m_PrefabInstance: {fileID: 193178738}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &196149959
 GameObject:
   m_ObjectHideFlags: 0
@@ -2923,6 +2929,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ea141802fa08b24685a573c956afdce, type: 3}
+--- !u!4 &362526724 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0ea141802fa08b24685a573c956afdce,
+    type: 3}
+  m_PrefabInstance: {fileID: 362526723}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &397500202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5102,7 +5114,7 @@ MonoBehaviour:
   dialogue:
     name: Planta seca
     sentences:
-    - Una planta menos en mi lista de tareas.
+    - La pobre nunca tuvo una oportunidad
 --- !u!1001 &766975606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13253,14 +13265,16 @@ Transform:
   - {fileID: 764360049}
   - {fileID: 1316445166}
   - {fileID: 1027801849}
+  - {fileID: 652124503}
   - {fileID: 91709332}
   - {fileID: 523303387}
   - {fileID: 217519778}
   - {fileID: 109988892}
   - {fileID: 344108991}
-  - {fileID: 585019028}
+  - {fileID: 362526724}
   - {fileID: 1330461094}
   - {fileID: 795444454}
+  - {fileID: 585019028}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
