@@ -437,6 +437,28 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 54927084}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &54927086 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8c4fd3f19df170d48af103e739a16fc8,
+    type: 3}
+  m_PrefabInstance: {fileID: 54927084}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &54927087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54927086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Planta sospechosamente verde
+    sentences:
+    - Falsa, pero siempre en su mejor momento.
 --- !u!1001 &91709331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -708,7 +730,7 @@ MonoBehaviour:
   dialogue:
     name: Latas Wonstew
     sentences:
-    - "\xA1Un trago de Wonstew y a seguir explorando uwu!"
+    - "\xA1Un twago de Wonstew y a seguiw explowando! uwu"
 --- !u!4 &109988892 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: e3c756e610acfb548adb462e6854cfbc,
@@ -1332,6 +1354,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fbe1510376a89641a2922090be29d24, type: 3}
+--- !u!1 &193178739 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3fbe1510376a89641a2922090be29d24,
+    type: 3}
+  m_PrefabInstance: {fileID: 193178738}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &212932952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4838,6 +4866,22 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 193178738}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &764360050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193178739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Planta seca
+    sentences:
+    - Una planta menos en mi lista de tareas.
 --- !u!1001 &766975606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6418,6 +6462,22 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1033628443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033628441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Espejo
+    sentences:
+    - El espejo no miente... desafortunadamente.
 --- !u!1 &1038685180
 GameObject:
   m_ObjectHideFlags: 0
@@ -8022,6 +8082,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fbe1510376a89641a2922090be29d24, type: 3}
+--- !u!1 &1293345970 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3fbe1510376a89641a2922090be29d24,
+    type: 3}
+  m_PrefabInstance: {fileID: 1293345969}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1294426765
 GameObject:
   m_ObjectHideFlags: 0
@@ -8067,6 +8133,22 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1293345969}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1299484538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293345970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebcd0aa5bc2b2584f9834a6b7e7d0913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    name: Planta seca
+    sentences:
+    - "Quiz\xE1s deber\xEDa probar con cactus."
 --- !u!1 &1304598526
 GameObject:
   m_ObjectHideFlags: 0
