@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using JetBrains.Annotations;
 using UnityEngine;
-using UnityEngine.InputSystem;
+
 
 public class item_throw : MonoBehaviour
 {
@@ -49,9 +46,9 @@ public class item_throw : MonoBehaviour
             //totalThrows = InventoryManager.Instance.Items[contador].numThrow;
 
 
-            Debug.Log("objeto " + InventoryManager.Instance.Items[contador].name);
-            Debug.Log("daño " + InventoryManager.Instance.Items[contador].valueDMG);
-            Debug.Log("contador " + contador);
+            // Debug.Log("objeto " + InventoryManager.Instance.Items[contador].name);
+            // Debug.Log("daño " + InventoryManager.Instance.Items[contador].valueDMG);
+            // Debug.Log("contador " + contador);
 
             //Debug.Log("tiros " + InventoryManager.Instance.Items[contador].numThrow);
 

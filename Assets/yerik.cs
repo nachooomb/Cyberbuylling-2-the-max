@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class yerik : MonoBehaviour
@@ -44,7 +42,7 @@ public class yerik : MonoBehaviour
         //QuitarVida();
         if (VidaYerik <= 0)
         {
-            Debug.Log("Vida = 0 cinematica muerte");
+            //Debug.Log("Vida = 0 cinematica muerte");
         }
 
 
@@ -55,8 +53,8 @@ public class yerik : MonoBehaviour
                 
                 DMG = InventoryManager.Instance.Items[_contador].valueDMG;
 
-                Debug.Log("DMG " + DMG);
-                Debug.Log("contadopr yerik " + _contador);
+                // Debug.Log("DMG " + DMG);
+                // Debug.Log("contadopr yerik " + _contador);
 
                 if(_contador<=InventoryManager.Instance.Items.Count-1) 
                 {

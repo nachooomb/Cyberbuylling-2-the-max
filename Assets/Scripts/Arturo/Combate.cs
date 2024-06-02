@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Net.Http.Headers;
 using UnityEngine;
 
 public class Combate : MonoBehaviour
@@ -23,11 +20,11 @@ public class Combate : MonoBehaviour
     {
         VidaArturo = yerikScript.VidaArturo;
 
-        Debug.Log("vida de artura " + VidaArturo);
+        //Debug.Log("vida de artura " + VidaArturo);
 
         if (VidaArturo < 0 )
         {
-            Debug.Log("Arturo ha muerto");
+            //Debug.Log("Arturo ha muerto");
         }
     }
 }
