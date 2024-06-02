@@ -11,6 +11,10 @@ public class control_arturo : MonoBehaviour
     private bool combate = false;
 
     GameObject Arturo;
+
+    GameObject Yerik;
+
+    private yerik YerikScript;
     private ClickAndMove clickAndMove;
     private ClickAndShoot clickAndShoot;
     private item_throw item_Throw;
@@ -31,7 +35,11 @@ public class control_arturo : MonoBehaviour
         UIcombate = GameObject.Find ("UI combate");
 
         UIexploracion.SetActive (true);
-        UIcombate.SetActive (true);
+        UIcombate.SetActive (false);
+
+        Yerik = GameObject.Find ("Yerik_3D");
+        YerikScript = Yerik.GetComponent<yerik>();
+        YerikScript.enabled = false;
 
     }
 
@@ -39,9 +47,7 @@ public class control_arturo : MonoBehaviour
     void Update()
     {
         //activar y desactivar el movimiento
-        //SwitchModes();
-        Debug.Log (UIcombate);
-        
+        //SwitchModes();        
     }
 
     public void ToggleMove()
@@ -75,10 +81,12 @@ public class control_arturo : MonoBehaviour
         if (shoot == true) {
             clickAndShoot.enabled = true;
             item_Throw.enabled = true;
+            YerikScript.enabled = true;
         }
         if (shoot == false) {
             clickAndShoot.enabled = false;
             item_Throw.enabled = false;
+            YerikScript.enabled = false;
         }
     }
 

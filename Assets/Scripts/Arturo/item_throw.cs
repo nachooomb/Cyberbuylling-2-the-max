@@ -34,6 +34,10 @@ public class item_throw : MonoBehaviour
     void Update()
     {
 
+        // Debug.Log("objeto " + InventoryManager.Instance.Items[contador].name);
+        // Debug.Log("daño " + InventoryManager.Instance.Items[contador].valueDMG);
+        // Debug.Log("tiros " + InventoryManager.Instance.Items[contador].numThrow);
+
         if (Input.GetKeyDown(KeyCode.H)){ 
             //Debug.Log("contador I" + contador);
                 
@@ -42,6 +46,15 @@ public class item_throw : MonoBehaviour
             } 
             
             objectToThrow = InventoryManager.Instance.Items[contador].Objeto;
+            //totalThrows = InventoryManager.Instance.Items[contador].numThrow;
+
+
+            Debug.Log("objeto " + InventoryManager.Instance.Items[contador].name);
+            Debug.Log("daño " + InventoryManager.Instance.Items[contador].valueDMG);
+            Debug.Log("contador " + contador);
+
+            //Debug.Log("tiros " + InventoryManager.Instance.Items[contador].numThrow);
+
 
             if(contador<=InventoryManager.Instance.Items.Count-1) 
             {
@@ -64,14 +77,12 @@ public class item_throw : MonoBehaviour
         //     contador = InventoryManager.Instance.Items.Count-1;
         // }
 
-        //Debug.Log("contador " + contador);
         //Debug.Log("largo de la lista " + InventoryManager.Instance.Items.Count);
 
 
         
-        totalThrows = InventoryManager.Instance.Items[contador].numThrow;
+        //totalThrows = InventoryManager.Instance.Items[contador].numThrow;
 
-        Debug.Log(InventoryManager.Instance.Items[contador].numThrow);
 
         if (Input.GetKeyDown(throwKey) && readyToThrow && totalThrows > 0) 
         {
