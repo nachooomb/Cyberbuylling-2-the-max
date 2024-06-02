@@ -30,7 +30,7 @@ public class ItemDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-         if(HePinchao == false)  return;
+        if(HePinchao == false)  return;
 
         if(clickAndMove.distanciaObjeto == 0){ return;}
 
