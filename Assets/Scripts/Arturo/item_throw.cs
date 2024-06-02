@@ -35,7 +35,7 @@ public class item_throw : MonoBehaviour
     {
 
         if (Input.GetKeyDown(KeyCode.H)){ 
-            Debug.Log("contador I" + contador);
+            //Debug.Log("contador I" + contador);
                 
             if (contador == InventoryManager.Instance.Items.Count){
                 contador = 0;
@@ -45,12 +45,12 @@ public class item_throw : MonoBehaviour
 
             if(contador<=InventoryManager.Instance.Items.Count-1) 
             {
-                Debug.Log("contador" + contador);
-                Debug.Log("lista" + InventoryManager.Instance.Items.Count);
+                //Debug.Log("contador" + contador);
+                //Debug.Log("lista" + InventoryManager.Instance.Items.Count);
                 contador++; 
             } 
 
-            Debug.Log("contador t" + contador);
+            //Debug.Log("contador t" + contador);
     
 
             
@@ -69,7 +69,9 @@ public class item_throw : MonoBehaviour
 
 
         
-        
+        totalThrows = InventoryManager.Instance.Items[contador].numThrow;
+
+        Debug.Log(InventoryManager.Instance.Items[contador].numThrow);
 
         if (Input.GetKeyDown(throwKey) && readyToThrow && totalThrows > 0) 
         {
@@ -106,6 +108,8 @@ public class item_throw : MonoBehaviour
         Vector3 forceToAdd = forceDirection * throwForce + transform.up * throwUpwardForce;
 
         proyectileRB.AddForce(forceToAdd, ForceMode.Impulse);
+
+        //totalThrows = InventoryManager.Instance.Items[contador].numThrow;
 
         totalThrows --;
 

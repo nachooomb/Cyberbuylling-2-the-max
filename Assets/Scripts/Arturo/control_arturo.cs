@@ -7,11 +7,16 @@ public class control_arturo : MonoBehaviour
 {
     private bool move = true;
     private bool shoot = false;
+    private bool exploracion = true;
+    private bool combate = false;
 
     GameObject Arturo;
     private ClickAndMove clickAndMove;
     private ClickAndShoot clickAndShoot;
     private item_throw item_Throw;
+
+    private GameObject UIexploracion;
+    private GameObject UIcombate;
 
     
     
@@ -22,6 +27,12 @@ public class control_arturo : MonoBehaviour
         clickAndShoot= Arturo.GetComponent<ClickAndShoot>();
         item_Throw= Arturo.GetComponent<item_throw>();
 
+        UIexploracion = GameObject.Find ("UI exploracion");
+        UIcombate = GameObject.Find ("UI combate");
+
+        UIexploracion.SetActive (true);
+        UIcombate.SetActive (true);
+
     }
 
     // Update is called once per frame
@@ -29,6 +40,7 @@ public class control_arturo : MonoBehaviour
     {
         //activar y desactivar el movimiento
         //SwitchModes();
+        Debug.Log (UIcombate);
         
     }
 
@@ -41,6 +53,18 @@ public class control_arturo : MonoBehaviour
         }
         if (move == false) {
             clickAndMove.enabled = false;
+        }
+    }
+
+    public void ToggleUIexploracion()
+    {
+        exploracion = !exploracion;
+
+        if (exploracion == true) {
+            UIexploracion.SetActive(true);
+        }
+        if (exploracion == false) {
+            UIexploracion.SetActive(false);
         }
     }
 
@@ -58,11 +82,25 @@ public class control_arturo : MonoBehaviour
         }
     }
 
+    public void ToggleUIcombate()
+    {
+        combate = !combate;
+
+        if (combate == true) {
+            UIcombate.SetActive(true);
+        }
+        if (combate == false) {
+            UIcombate.SetActive(false);
+        }
+    }
+
     public void SwitchModes()
     {
        if (Input.GetKeyDown(KeyCode.M)){
             ToggleMove();
+            ToggleUIexploracion();
             ToggleShoot();
+            ToggleUIcombate();
         } 
         
     }

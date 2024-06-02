@@ -12,7 +12,6 @@ public class item : ScriptableObject
     public Sprite iconSprite;
     public string itemType;
     public GameObject Objeto;
-
-    public string mensage;
+    public int numThrow;
 
 }

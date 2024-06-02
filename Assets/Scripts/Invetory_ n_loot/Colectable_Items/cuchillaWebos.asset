@@ -19,4 +19,4 @@ MonoBehaviour:
   iconSprite: {fileID: 21300000, guid: 3051f4c36cca0944db5b09d597174b77, type: 3}
   itemType: usable
   Objeto: {fileID: 5693285419678181361, guid: d0794900abcbe344781fb07f15805e1a, type: 3}
-  mensage: 
+  numThrow: 3
