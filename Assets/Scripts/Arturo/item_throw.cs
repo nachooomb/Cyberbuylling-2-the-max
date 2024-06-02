@@ -34,7 +34,7 @@ public class item_throw : MonoBehaviour
         // Debug.Log("objeto " + InventoryManager.Instance.Items[contador].name);
         // Debug.Log("daño " + InventoryManager.Instance.Items[contador].valueDMG);
         // Debug.Log("tiros " + InventoryManager.Instance.Items[contador].numThrow);
-        Debug.Log("Contador Arturo" + contador);
+        //Debug.Log("Contador Arturo" + contador);
 
         if (contador == InventoryManager.Instance.Items.Count)
         {

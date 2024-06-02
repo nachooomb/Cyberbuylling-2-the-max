@@ -38,7 +38,7 @@ public class yerik : MonoBehaviour
             Debug.Log("Vida = 0 cinematica muerte");
         }
 
-        Debug.Log("Contador yerik" + _contador);
+        //Debug.Log("Contador yerik" + _contador);
         if (_contador == InventoryManager.Instance.Items.Count)
         {
             _contador = 0;
