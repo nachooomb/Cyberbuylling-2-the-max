@@ -5,9 +5,17 @@ using UnityEngine;
 
 public class yerik : MonoBehaviour
 {
-    public int Vida = 100;
+    GameObject Arturo;
 
-    item_throw _item_Throw;
+    Combate ArturoCombatStage;
+
+    public int VidaArturo;
+
+    bool Cooldown;
+
+    public int VidaYerik = 100;
+
+    //item_throw _item_Throw;
 
     int vidaQuitar;
 
@@ -17,21 +25,24 @@ public class yerik : MonoBehaviour
 
     void Start()
     {
-        _item_Throw = GameObject.Find("Arturo").GetComponent<item_throw>();
+        VidaArturo = 104;
 
         _contador = 0;
         DMG = 0;
+        Cooldown = true;
+
+        StartCoroutine(Ataque());
     }
 
     // Update is called once per frame
     void Update()
     {
-        //_contador = _item_Throw.contador;
-        //Debug.Log("vida " + Vida);
-        
-
+        if (VidaArturo > 0 )
+        {
+            StartCoroutine(Ataque());
+        }
         //QuitarVida();
-        if (Vida <= 0)
+        if (VidaYerik <= 0)
         {
             Debug.Log("Vida = 0 cinematica muerte");
         }
@@ -56,7 +67,21 @@ public class yerik : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision col)
+    IEnumerator Ataque()
+    {
+        
+        if (Cooldown)
+        {
+            VidaArturo = VidaArturo- 5;
+            Cooldown =! Cooldown;
+            yield return new WaitForSeconds(6.0f);
+            Cooldown =! Cooldown;
+        }
+        
+    }
+
+
+    void OnCollisionEnter()
     {
         QuitarVida();
         //Debug.Log("colisiona con " + col.gameObject.name);
@@ -66,7 +91,7 @@ public class yerik : MonoBehaviour
     {
         vidaQuitar = DMG;
         
-        Vida = Vida-vidaQuitar;
+       VidaYerik =VidaYerik-vidaQuitar;
 
         //Debug.Log("vida " + Vida);
     }
