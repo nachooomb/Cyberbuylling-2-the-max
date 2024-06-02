@@ -45,7 +45,6 @@ public class yerik : MonoBehaviour
                 DMG = InventoryManager.Instance.Items[_contador].valueDMG;
 
                 Debug.Log("DMG " + DMG);
-                Debug.Log("DMG " + DMG);
                 Debug.Log("contadopr yerik " + _contador);
 
                 if(_contador<=InventoryManager.Instance.Items.Count-1) 
