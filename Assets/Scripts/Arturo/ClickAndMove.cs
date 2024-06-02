@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Rendering.Universal;
 
 public class ClickAndMove : MonoBehaviour
 {
@@ -20,6 +21,8 @@ public class ClickAndMove : MonoBehaviour
 
     [SerializeField] ParticleSystem clickEffect;
 
+    GameObject clickEffectClone;
+
 
 
 
@@ -27,10 +30,12 @@ public class ClickAndMove : MonoBehaviour
     {
         ArturoNavMesh = GetComponent<NavMeshAgent>();
         ArturoAnim = GetComponent<Animator>();
+        clickEffectClone = GameObject.Find("Click_Effect(Clone)");
     }
 
     void Update()
     {
+        clickEffectClone = GameObject.Find("Click_Effect(Clone)");
         if (Input.GetMouseButtonDown(1))
         {
             Ray movementRay = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -47,6 +52,8 @@ public class ClickAndMove : MonoBehaviour
             }
 
             FaceTarget();
+            
+            StartCoroutine(clickEffectCorrutina());
             
         }
 
@@ -79,6 +86,14 @@ public class ClickAndMove : MonoBehaviour
         }else{
             ArturoAnim.SetBool("walkb", false);
         }
+    }
+
+    IEnumerator clickEffectCorrutina()
+    { 
+        yield return new WaitForSeconds(2.0f);
+        //Debug.Log("ClickEffectCorrutina");
+        
+        Destroy(clickEffectClone);
     }
 
 }
