@@ -29,9 +29,9 @@ public class Abrir_Cerrar : MonoBehaviour
             }
         }
 
-        if (_contador == 3)
+        if (_contador == 2)
         {
-            _contador=1;
+            _contador=0;
         }
 
         Debug.Log(_contador);
@@ -40,6 +40,7 @@ public class Abrir_Cerrar : MonoBehaviour
     void OnMouseDown()
     {
         _contador++;
+        if (_contador >= 1)
         abrir_cerrar();
     }
 }
