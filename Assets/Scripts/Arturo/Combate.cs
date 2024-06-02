@@ -2,16 +2,19 @@ using UnityEngine;
 
 public class Combate : MonoBehaviour
 {
-    public int VidaArturo;
-
+    public float VidaArturo;
     GameObject Yerik;
-
     yerik yerikScript;
+
+    [SerializeField] private Healthbar _healthbar;
+
     void Start()
     {
         VidaArturo = 100;
         Yerik = GameObject.Find("Yerik_3D");
         yerikScript = Yerik.GetComponent<yerik>();
+        _healthbar.UpdateHealthBar(100, VidaArturo);
+        VidaArturo = yerikScript.VidaArturo;
 
     }
 
@@ -19,6 +22,8 @@ public class Combate : MonoBehaviour
     void Update()
     {
         VidaArturo = yerikScript.VidaArturo;
+
+        _healthbar.UpdateHealthBar(100, VidaArturo);
 
         //Debug.Log("vida de artura " + VidaArturo);
 

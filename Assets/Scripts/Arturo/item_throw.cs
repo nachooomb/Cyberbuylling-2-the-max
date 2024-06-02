@@ -34,15 +34,23 @@ public class item_throw : MonoBehaviour
         // Debug.Log("objeto " + InventoryManager.Instance.Items[contador].name);
         // Debug.Log("daño " + InventoryManager.Instance.Items[contador].valueDMG);
         // Debug.Log("tiros " + InventoryManager.Instance.Items[contador].numThrow);
+        Debug.Log("Contador Arturo" + contador);
 
-        if (Input.GetKeyDown(KeyCode.H)){ 
-            //Debug.Log("contador I" + contador);
-                
-            if (contador == InventoryManager.Instance.Items.Count){
-                contador = 0;
-            } 
-            
+        if (contador == InventoryManager.Instance.Items.Count)
+        {
+            contador = 0;
+        }
+
+        if (contador<=InventoryManager.Instance.Items.Count-1)
+        { 
+            //Debug.Log("objeto " + objectToThrow.name);
             objectToThrow = InventoryManager.Instance.Items[contador].Objeto;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space)){ 
+            //Debug.Log("contador I" + contador);
+            
+            //objectToThrow = InventoryManager.Instance.Items[contador].Objeto;
             //totalThrows = InventoryManager.Instance.Items[contador].numThrow;
 
 
@@ -61,10 +69,8 @@ public class item_throw : MonoBehaviour
             } 
 
             //Debug.Log("contador t" + contador);
-    
-
-            
         }
+
 
         // if (Input.GetKeyDown(KeyCode.G) && contador>= 0)
         // {

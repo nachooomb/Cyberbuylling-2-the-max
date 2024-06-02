@@ -4,30 +4,23 @@ using UnityEngine;
 public class yerik : MonoBehaviour
 {
     GameObject Arturo;
-
     Combate ArturoCombatStage;
+    public int VidaArturo = 104;
 
-    public int VidaArturo;
+    bool CooldownATK;
 
-    bool Cooldown;
-
-    public int VidaYerik = 100;
-
-    //item_throw _item_Throw;
-
-    int vidaQuitar;
-
+    public float VidaYerik;
+    [SerializeField] private Healthbar _healthbar;
+    float vidaQuitar;
     int _contador = 0;
-    int DMG = 0;
-
-
+    float DMG = 0;
     void Start()
     {
         VidaArturo = 104;
 
         _contador = 0;
         DMG = 0;
-        Cooldown = true;
+        CooldownATK = true;
 
         StartCoroutine(Ataque());
     }
@@ -42,38 +35,49 @@ public class yerik : MonoBehaviour
         //QuitarVida();
         if (VidaYerik <= 0)
         {
-            //Debug.Log("Vida = 0 cinematica muerte");
+            Debug.Log("Vida = 0 cinematica muerte");
         }
 
+        Debug.Log("Contador yerik" + _contador);
+        if (_contador == InventoryManager.Instance.Items.Count)
+        {
+            _contador = 0;
+        }
 
-        if (Input.GetKeyDown(KeyCode.H)){
-            if (_contador == InventoryManager.Instance.Items.Count){
-                    _contador = 0;
-                } 
+        if (_contador<=InventoryManager.Instance.Items.Count-1)
+        { 
+            //Debug.Log("DMG " + DMG);
+            DMG = InventoryManager.Instance.Items[_contador].valueDMG;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space)){
+            if (_contador == InventoryManager.Instance.Items.Count)
+            {
+                _contador = 0;
+            } 
                 
-                DMG = InventoryManager.Instance.Items[_contador].valueDMG;
+                //DMG = InventoryManager.Instance.Items[_contador].valueDMG;
 
-                // Debug.Log("DMG " + DMG);
                 // Debug.Log("contadopr yerik " + _contador);
 
-                if(_contador<=InventoryManager.Instance.Items.Count-1) 
-                {
-                    //Debug.Log("contador" + contador);
-                    //Debug.Log("lista" + InventoryManager.Instance.Items.Count);
-                    _contador++; 
-                }
+            if(_contador<=InventoryManager.Instance.Items.Count-1) 
+            {
+                 //Debug.Log("contador" + contador);
+                //Debug.Log("lista" + InventoryManager.Instance.Items.Count);
+                 _contador++; 
+            }
         }
     }
 
     IEnumerator Ataque()
     {
         
-        if (Cooldown)
+        if (CooldownATK)
         {
             VidaArturo = VidaArturo- 5;
-            Cooldown =! Cooldown;
+            CooldownATK =! CooldownATK;
             yield return new WaitForSeconds(6.0f);
-            Cooldown =! Cooldown;
+            CooldownATK =! CooldownATK;
         }
         
     }
@@ -82,15 +86,15 @@ public class yerik : MonoBehaviour
     void OnCollisionEnter()
     {
         QuitarVida();
-        //Debug.Log("colisiona con " + col.gameObject.name);
+        _healthbar.UpdateHealthBar(100, VidaYerik);
     }
 
     void QuitarVida()
     {
         vidaQuitar = DMG;
         
-       VidaYerik =VidaYerik-vidaQuitar;
+        VidaYerik = VidaYerik-vidaQuitar;
 
-        //Debug.Log("vida " + Vida);
+        Debug.Log("vida Yerik " + VidaYerik);
     }
 }
