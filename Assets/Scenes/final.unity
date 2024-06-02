@@ -486,8 +486,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arturo: {fileID: 0}
-  ArturoAnim: {fileID: 0}
 --- !u!65 &48060442
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -738,8 +736,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arturo: {fileID: 0}
-  ArturoAnim: {fileID: 0}
 --- !u!65 &54927091
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1964,28 +1960,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 196149961}
-  - component: {fileID: 196149960}
+  - component: {fileID: 196149962}
   m_Layer: 0
   m_Name: DialogueManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &196149960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196149959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a8fa31ce8eb5dd40b567d54e59d2f02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nameText: {fileID: 1815515814}
-  dialogueText: {fileID: 152284408}
+  m_IsActive: 1
 --- !u!4 &196149961
 Transform:
   m_ObjectHideFlags: 0
@@ -2001,6 +1983,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &196149962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196149959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a8fa31ce8eb5dd40b567d54e59d2f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: {fileID: 1815515814}
+  dialogueText: {fileID: 152284408}
 --- !u!1 &196398424
 GameObject:
   m_ObjectHideFlags: 0
@@ -2984,8 +2980,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arturo: {fileID: 0}
-  ArturoAnim: {fileID: 0}
 --- !u!65 &275618238
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3978,10 +3972,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -4928,8 +4922,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arturo: {fileID: 0}
-  ArturoAnim: {fileID: 0}
 --- !u!65 &424977074
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5380,8 +5372,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arturo: {fileID: 0}
-  ArturoAnim: {fileID: 0}
 --- !u!65 &505923422
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5422,7 +5412,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 196149960}
+      objectReference: {fileID: 196149962}
     - target: {fileID: 1773581658659220003, guid: 5ef981daa1f544240bffa2e836d35017,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -5436,7 +5426,7 @@ PrefabInstance:
     - target: {fileID: 1773581659931912402, guid: 5ef981daa1f544240bffa2e836d35017,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1773581659931912403, guid: 5ef981daa1f544240bffa2e836d35017,
         type: 3}
@@ -6096,8 +6086,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arturo: {fileID: 0}
-  ArturoAnim: {fileID: 0}
 --- !u!65 &546924966
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6145,8 +6133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arturo: {fileID: 0}
-  ArturoAnim: {fileID: 0}
 --- !u!65 &583119089
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6519,8 +6505,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arturo: {fileID: 0}
-  ArturoAnim: {fileID: 0}
 --- !u!65 &639198750
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6819,8 +6803,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arturo: {fileID: 0}
-  ArturoAnim: {fileID: 0}
 --- !u!65 &764360054
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7041,8 +7023,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arturo: {fileID: 0}
-  ArturoAnim: {fileID: 0}
 --- !u!114 &767946353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8788,8 +8768,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arturo: {fileID: 0}
-  ArturoAnim: {fileID: 0}
 --- !u!65 &1033628445
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10537,8 +10515,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arturo: {fileID: 0}
-  ArturoAnim: {fileID: 0}
 --- !u!65 &1299484542
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11046,8 +11022,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arturo: {fileID: 0}
-  ArturoAnim: {fileID: 0}
 --- !u!65 &1330461097
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11512,8 +11486,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arturo: {fileID: 0}
-  ArturoAnim: {fileID: 0}
 --- !u!114 &1420281310
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12079,8 +12051,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arturo: {fileID: 0}
-  ArturoAnim: {fileID: 0}
 --- !u!65 &1446254191
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12509,8 +12479,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arturo: {fileID: 0}
-  ArturoAnim: {fileID: 0}
 --- !u!65 &1504905053
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13370,8 +13338,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arturo: {fileID: 0}
-  ArturoAnim: {fileID: 0}
 --- !u!1 &1642936434
 GameObject:
   m_ObjectHideFlags: 0
@@ -15065,8 +15031,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arturo: {fileID: 0}
-  ArturoAnim: {fileID: 0}
 --- !u!114 &1803252440
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16728,8 +16692,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arturo: {fileID: 0}
-  ArturoAnim: {fileID: 0}
 --- !u!65 &1998443380
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16887,8 +16849,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arturo: {fileID: 0}
-  ArturoAnim: {fileID: 0}
 --- !u!65 &2010919973
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17490,8 +17450,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c616e3115e4e5f6459165d1c282d35cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Arturo: {fileID: 0}
-  ArturoAnim: {fileID: 0}
 --- !u!65 &2110730180
 BoxCollider:
   m_ObjectHideFlags: 0
