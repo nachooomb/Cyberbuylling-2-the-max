@@ -6,7 +6,7 @@ public class item_throw : MonoBehaviour
 
     public int contador = 0;
     
-
+    private Animator _animatorArturo;
 
     public Transform cam;
     public Transform attackPoint;
@@ -25,6 +25,7 @@ public class item_throw : MonoBehaviour
     {
         readyToThrow = true;    
         contador = 0;
+        _animatorArturo = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -126,6 +127,8 @@ public class item_throw : MonoBehaviour
         //totalThrows = InventoryManager.Instance.Items[contador].numThrow;
 
         totalThrows --;
+
+        //revisar animacion _animatorArturo.SetTrigger("throw");
 
         //Debug.Log(forceDirection);
 

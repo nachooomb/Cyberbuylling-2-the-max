@@ -5,6 +5,9 @@ public class yerik : MonoBehaviour
 {
     GameObject Arturo;
     Combate ArturoCombatStage;
+    private Animator _animatorArturo;
+    private Animator _animatorYerik;
+
     public int VidaArturo = 104;
 
     bool CooldownATK;
@@ -23,6 +26,11 @@ public class yerik : MonoBehaviour
         CooldownATK = true;
 
         StartCoroutine(Ataque());
+
+        Arturo = GameObject.Find("Arturo");
+        _animatorArturo = Arturo.GetComponent<Animator>();
+
+        _animatorYerik = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -36,6 +44,11 @@ public class yerik : MonoBehaviour
         if (VidaYerik <= 0)
         {
             Debug.Log("Vida = 0 elegir final");
+            if (_animatorYerik.GetBool("die 0") == false)
+            {
+                _animatorYerik.SetTrigger("die");
+                _animatorYerik.SetBool("die 0", true);
+            }
         }
 
         //Debug.Log("Contador yerik" + _contador);
@@ -75,6 +88,7 @@ public class yerik : MonoBehaviour
         if (CooldownATK)
         {
             VidaArturo = VidaArturo- 5;
+            _animatorArturo.SetTrigger("hit");
             CooldownATK =! CooldownATK;
             yield return new WaitForSeconds(6.0f);
             CooldownATK =! CooldownATK;
@@ -87,6 +101,7 @@ public class yerik : MonoBehaviour
     {
         QuitarVida();
         _healthbar.UpdateHealthBar(100, VidaYerik);
+        _animatorYerik.SetTrigger("hit");
     }
 
     void QuitarVida()

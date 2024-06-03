@@ -14,6 +14,7 @@ GameObject uiexploracion;
 GameObject primertexto;
 GameObject uicombate;
 GameObject textofinal;
+bool trigger;
 
  
 void Start()
@@ -28,6 +29,16 @@ void Start()
      video.SetActive(false);
      videoplayer = GameObject.Find ("VideoPlayer");
      videoplayer.SetActive(false);
+     trigger = false;
+     }
+
+     void Update()
+     {
+          if (trigger)
+          {
+               Empezarelvideo();
+               trigger = false;
+          }
      }
 
 
