@@ -19,7 +19,6 @@ bool trigger;
  
 void Start()
      {
-     textofinal.SetActive(false);
      vid.clip = videoclips[0];
      primertexto = GameObject.Find("PrimerTextoInfo");
      textofinal = GameObject.Find("TextoFinal");
@@ -29,15 +28,15 @@ void Start()
      video.SetActive(false);
      videoplayer = GameObject.Find ("VideoPlayer");
      videoplayer.SetActive(false);
-     trigger = false;
+     trigger = true;
      }
 
      void Update()
      {
-          if (trigger)
+         if (trigger ==  true)
           {
-               Empezarelvideo();
-               trigger = false;
+              Empezarelvideo();
+               //trigger = false;
           }
      }
 

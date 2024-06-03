@@ -8,6 +8,8 @@ public class yerik : MonoBehaviour
     private Animator _animatorArturo;
     private Animator _animatorYerik;
 
+    GameObject textofinal;
+
     public int VidaArturo = 104;
 
     bool CooldownATK;
@@ -19,6 +21,8 @@ public class yerik : MonoBehaviour
     float DMG = 0;
     void Start()
     {
+        textofinal = GameObject.Find("TextoFinal");
+        textofinal.SetActive(false);
         VidaArturo = 104;
 
         _contador = 0;
@@ -43,6 +47,7 @@ public class yerik : MonoBehaviour
         //QuitarVida();
         if (VidaYerik <= 0)
         {
+            textofinal.SetActive(true);
             Debug.Log("Vida = 0 elegir final");
             if (_animatorYerik.GetBool("die 0") == false)
             {
