@@ -19,17 +19,18 @@ bool trigger;
  
 void Start()
      {
-     textofinal.SetActive(false);
-     vid.clip = videoclips[0];
-     primertexto = GameObject.Find("PrimerTextoInfo");
-     textofinal = GameObject.Find("TextoFinal");
-     uiexploracion = GameObject.Find("UI exploracion");
-     uicombate = GameObject.Find("UI combate");
-     video = GameObject.Find ("VIDEO");
-     video.SetActive(false);
-     videoplayer = GameObject.Find ("VideoPlayer");
-     videoplayer.SetActive(false);
-     trigger = false;
+          //textofinal.SetActive(false);
+          vid.clip = videoclips[0];
+          primertexto = GameObject.Find("PrimerTextoInfo");
+          textofinal = GameObject.Find("TextoFinal");
+          uiexploracion = GameObject.Find("UI exploracion");
+          uicombate = GameObject.Find("UI combate");
+          video = GameObject.Find ("VIDEO");
+          video.SetActive(false);
+          videoplayer = GameObject.Find ("VideoPlayer");
+          videoplayer.SetActive(false);
+          trigger = true;
+          uiexploracion.SetActive(false);
      }
 
      void Update()
