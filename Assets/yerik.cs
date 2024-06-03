@@ -35,7 +35,7 @@ public class yerik : MonoBehaviour
         //QuitarVida();
         if (VidaYerik <= 0)
         {
-            Debug.Log("Vida = 0 cinematica muerte");
+            Debug.Log("Vida = 0 elegir final");
         }
 
         //Debug.Log("Contador yerik" + _contador);
