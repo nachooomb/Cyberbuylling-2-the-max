@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Media;
 using UnityEngine;
 using UnityEngine.Video;
  
@@ -36,7 +35,7 @@ void Start()
          if (trigger ==  true)
           {
               Empezarelvideo();
-               //trigger = false;
+               trigger = false;
           }
      }
 
