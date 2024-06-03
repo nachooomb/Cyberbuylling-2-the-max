@@ -38,6 +38,8 @@ public class ItemPickUp : MonoBehaviour
 
                 if(clickAndMove.distanciaObjeto <= 0.1f){
                     PickUp();
+                    dialogueTrigger.TriggerDialogue();
+
                     //yield return null;
                 }
             //Debug.Log(clickAndMove.distanciaObjeto);
