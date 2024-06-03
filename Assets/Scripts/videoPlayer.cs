@@ -12,13 +12,18 @@ GameObject video;
 GameObject videoplayer;
 GameObject uiexploracion;
 GameObject primertexto;
+GameObject uicombate;
+GameObject textofinal;
 
  
 void Start()
      {
+     textofinal.SetActive(false);
      vid.clip = videoclips[0];
      primertexto = GameObject.Find("PrimerTextoInfo");
+     textofinal = GameObject.Find("TextoFinal");
      uiexploracion = GameObject.Find("UI exploracion");
+     uicombate = GameObject.Find("UI combate");
      video = GameObject.Find ("VIDEO");
      video.SetActive(false);
      videoplayer = GameObject.Find ("VideoPlayer");
@@ -48,6 +53,8 @@ public void FinalMalo()
       vid.clip = videoclips[1];
       video.SetActive(true);
      videoplayer.SetActive(true);
+     uicombate.SetActive(false);
+     textofinal.SetActive(false);
      //vid.loopPointReached += FinFinalMalo;
 }
 public void FinFinalMalo(UnityEngine.Video.VideoPlayer vp2)
@@ -60,6 +67,8 @@ public void FinalBueno()
       vid.clip = videoclips[2];
       video.SetActive(true);
      videoplayer.SetActive(true);
+     uicombate.SetActive(false);
+     textofinal.SetActive(false);
      //vid.loopPointReached += FinFinalBueno;
 }
 public void FinFinalBueno(UnityEngine.Video.VideoPlayer vp3)
