@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
@@ -12,6 +13,8 @@ public class control_arturo : MonoBehaviour
     public bool exploracionUI = true;
     public bool combateUI = false;
     public bool itemInterac = true;
+    bool camaraInventarioInitialized = false;
+
     
     //private bool healthbarUI = false;
 
@@ -36,6 +39,9 @@ public class control_arturo : MonoBehaviour
     public GameObject UIhealthbarArturo;
     public GameObject UIhealthbarYerik;
     public GameObject DialogueManager;
+
+    
+    public CinemachineVirtualCamera camaraInventario;
 
     
     
@@ -177,7 +183,7 @@ public class control_arturo : MonoBehaviour
 
     public void ToggleItemInterac()
     {
-        Debug.Log(itemInterac);
+        //Debug.Log(itemInterac);
         itemInterac = !itemInterac;
         Debug.Log(itemInterac);
         foreach(GameObject objs in ObjsCombate)
@@ -215,5 +221,22 @@ public class control_arturo : MonoBehaviour
         }
         rigidbodyArturo.isKinematic = !itemInterac;
         navMeshAgentArturo.enabled = itemInterac;
+    }
+
+    public void ToggleCamaraInventariol()
+    {
+        Debug.Log(camaraInventarioInitialized);
+
+        camaraInventarioInitialized = !camaraInventarioInitialized;
+        Debug.Log(camaraInventarioInitialized);
+        if (camaraInventarioInitialized == true) 
+        {
+            camaraInventario.Priority = 11;
+        }
+        if(camaraInventarioInitialized == false) 
+        {
+            Debug.Log("falso");
+            camaraInventario.Priority = 0;
+        }
     }
 }

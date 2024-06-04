@@ -1,18 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 
 public class Camara_Inventario : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public CinemachineVirtualCamera camaraInventario;
+    bool camaraInventarioInitialized = false;
 
-    // Update is called once per frame
-    void Update()
+    public void ToggleCamaraInventariol()
     {
-        
+        camaraInventarioInitialized = !camaraInventarioInitialized;
+        if (camaraInventario == true) 
+        {
+            camaraInventario.Priority = 11;
+        }
+        if(camaraInventario == false) 
+        {
+            camaraInventario.Priority = 0;
+        }
     }
 }
