@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Camera_Trigger
   - player
+  - ObjetosCombate
   layers:
   - Default
   - TransparentFX

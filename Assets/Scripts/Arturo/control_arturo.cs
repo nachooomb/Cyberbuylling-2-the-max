@@ -1,30 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class control_arturo : MonoBehaviour
 {
-    private bool move = true;
-    private bool shoot = false;
-    private bool exploracionUI = true;
-    private bool combateUI = false;
+    public bool move = true;
+    public bool combat = false;
+    public bool shoot = false;
+    public bool exploracionUI = true;
+    public bool combateUI = false;
+    public bool itemInterac = true;
+    
     //private bool healthbarUI = false;
 
     GameObject Arturo;
     GameObject Yerik;
 
-    private yerik yerikScript;
-    private ClickAndMove clickAndMove;
-    private ClickAndShoot clickAndShoot;
-    private item_throw item_Throw;
-    private Combate combatStage;
-    private Healthbar healthbarArturo;
-    private Healthbar healthbarYerik;
+    public NavMeshAgent navMeshAgentArturo;
+    public Rigidbody rigidbodyArturo;
+    public yerik yerikScript;
+    public ClickAndMove clickAndMove;
+    public ClickAndShoot clickAndShoot;
+    public item_throw item_Throw;
+    public Combate combate;
+    public Healthbar healthbarArturo;
+    public Healthbar healthbarYerik;
+    public GameObject[] ObjsCombate;
+    public GameObject[] dialogueObjs;
 
-    private GameObject UIexploracion;
-    private GameObject UIcombate;
+    public GameObject UIexploracion;
+    public GameObject UIcombate;
     public GameObject UIhealthbarArturo;
     public GameObject UIhealthbarYerik;
+    public GameObject DialogueManager;
 
     
     
@@ -34,8 +43,10 @@ public class control_arturo : MonoBehaviour
         clickAndMove = Arturo.GetComponent<ClickAndMove>();
         clickAndShoot= Arturo.GetComponent<ClickAndShoot>();
         item_Throw= Arturo.GetComponent<item_throw>();
-        combatStage = Arturo.GetComponent<Combate>();
+        combate = Arturo.GetComponent<Combate>();
         healthbarArturo = UIhealthbarArturo.GetComponent<Healthbar>();
+        navMeshAgentArturo = Arturo.GetComponent<NavMeshAgent>();
+        rigidbodyArturo = Arturo.GetComponent<Rigidbody>();
         //healthbarArturo = Arturo.GetComponentInChildren<Healthbar>();
 
         UIexploracion = GameObject.Find ("UI exploracion");
@@ -44,6 +55,10 @@ public class control_arturo : MonoBehaviour
 
         UIexploracion.SetActive (true);
         UIcombate.SetActive (false);
+
+        DialogueManager = GameObject.Find ("DialogueManager");
+        ObjsCombate = GameObject.FindGameObjectsWithTag ("ObjetosCombate");
+        
 
         Yerik = GameObject.Find ("Yerik_3D");
         yerikScript = Yerik.GetComponent<yerik>();
@@ -54,7 +69,8 @@ public class control_arturo : MonoBehaviour
     void Update()
     {
         //activar y desactivar el movimiento
-        //SwitchModes();        
+        //SwitchModes();       
+        ObjsCombate = GameObject.FindGameObjectsWithTag ("ObjetosCombate");
     }
 
     public void ToggleMove()
@@ -81,23 +97,34 @@ public class control_arturo : MonoBehaviour
         }
     }
 
+    public void ToggleCombat()
+    {
+        combat = !combat;
+
+        if (combat == true) 
+        {
+            clickAndShoot.enabled = true;
+        }
+        if(combat == false) 
+        {
+            clickAndShoot.enabled = false;
+        }
+    }
     public void ToggleShoot()
     {
         shoot = !shoot;
 
         if (shoot == true) {
-            clickAndShoot.enabled = true;
             item_Throw.enabled = true;
             yerikScript.enabled = true;
-            combatStage.enabled = true;
+            combate.enabled = true;
             healthbarArturo.enabled = true;
             healthbarYerik.enabled = true;
         }
         if (shoot == false) {
-            clickAndShoot.enabled = false;
             item_Throw.enabled = false;
             yerikScript.enabled = false;
-            combatStage.enabled = false;
+            combate.enabled = false;
             healthbarArturo.enabled = false;
             healthbarYerik.enabled = false;
         }
@@ -123,10 +150,35 @@ public class control_arturo : MonoBehaviour
     {
        if (Input.GetKeyDown(KeyCode.M)){
             ToggleMove();
+            ToggleCombat();
             ToggleUIexploracion();
             ToggleShoot();
             ToggleUIcombate();
         } 
         
+    }
+
+    public void ToggleEnterCombat()
+    {
+
+    }
+
+    public void ToggleModeCombat()
+    {
+        
+    }
+
+    public void ToggleItemInterac()
+    {
+        Debug.Log(itemInterac);
+        itemInterac = !itemInterac;
+        Debug.Log(itemInterac);
+        foreach(GameObject objs in ObjsCombate)
+        {
+            objs.GetComponent<ItemPickUp>().enabled = itemInterac;
+            objs.GetComponent<Destroy_item>().enabled = itemInterac;
+        }
+        rigidbodyArturo.isKinematic = !itemInterac;
+        navMeshAgentArturo.enabled = itemInterac;
     }
 }

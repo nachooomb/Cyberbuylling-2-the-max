@@ -14,6 +14,7 @@ public class ItemPickUp : MonoBehaviour
     public Animator ArturoAnim;
 
     private ClickAndMove clickAndMove;
+    private control_arturo control_arturo;
 
     private DialogueTrigger dialogueTrigger;
 
@@ -27,6 +28,7 @@ public class ItemPickUp : MonoBehaviour
         ArturoNavMesh = Arturo.GetComponent<NavMeshAgent>();
         ArturoAnim = Arturo.GetComponent<Animator>();
         dialogueTrigger = GetComponent<DialogueTrigger>();
+        control_arturo = Arturo.GetComponent<control_arturo>();
     }
 
     void Update (){
@@ -63,14 +65,18 @@ public class ItemPickUp : MonoBehaviour
 
      public void GoDestinationPickUP(Vector3 destinationPoint) 
     {
-        ArturoNavMesh.SetDestination(destinationPoint);
-        //FaceTarget();
+        if(control_arturo.itemInterac == true)
+        {
 
-        if(ArturoNavMesh.remainingDistance>=0.1){
-            //ArturoAnim.SetBool("walkb", true);
-        }else{
-            //ArturoAnim.SetBool("walkb", false);
-            //PickUp();
+            ArturoNavMesh.SetDestination(destinationPoint);
+            //FaceTarget();
+
+            if(ArturoNavMesh.remainingDistance>=0.1){
+                //ArturoAnim.SetBool("walkb", true);
+            }else{
+                //ArturoAnim.SetBool("walkb", false);
+                //PickUp();
+            }
         }
     }
 

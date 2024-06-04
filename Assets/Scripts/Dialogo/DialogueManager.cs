@@ -15,7 +15,7 @@ public class DialogueManager : MonoBehaviour
     
 
     GameObject Arturo;
-    ClickAndMove _clickAndMove;
+    control_arturo _controlArturo;
 
     // Start is called before the first frame update
     void Start()
@@ -25,16 +25,20 @@ public class DialogueManager : MonoBehaviour
         dialogueBox.SetActive(false);
         sentences = new Queue<string>();
 
-       Arturo = GameObject.Find ("Arturo");
-       _clickAndMove = Arturo.GetComponent<ClickAndMove>();
-        
+        Arturo = GameObject.Find ("Arturo");
+        _controlArturo = Arturo.GetComponent<control_arturo>();
+
+        //_controlArturo.clickAndMove.enabled = false;
     }
 
     public void StartDialogue (Dialogue dialogue)
     {
         dialogueBox.SetActive(true);
 
-        _clickAndMove.enabled = false;
+        _controlArturo.clickAndMove.enabled = false;
+        _controlArturo.combate.enabled = false;
+        _controlArturo.clickAndShoot.enabled = false;
+        _controlArturo.item_Throw.enabled = false;
 
         nameText.text = dialogue.name;
 
@@ -47,6 +51,8 @@ public class DialogueManager : MonoBehaviour
         DisplayNextSentence();
 
     }
+
+    
 
    
     public void DisplayNextSentence()
@@ -76,7 +82,7 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         dialogueBox.SetActive(false);
-       _clickAndMove.enabled = true;
+       _controlArturo.clickAndMove.enabled = true;
 
     }
     
