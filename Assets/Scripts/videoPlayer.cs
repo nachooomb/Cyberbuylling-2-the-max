@@ -39,13 +39,6 @@ void Start()
               Empezarelvideo();
                trigger = false;
           }
-          if (Input.GetKeyDown(KeyCode.Escape) && _skipVideo == true)
-          {
-               vid.enabled = false;
-               FinIntro(vid);
-               _skipVideo = false;
-               Debug.Log("skip video");
-          }
      }
 
 
