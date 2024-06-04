@@ -14,7 +14,7 @@ GameObject primertexto;
 GameObject uicombate;
 GameObject textofinal;
 bool trigger;
-bool _skipVideo;
+//bool _skipVideo;
 
  
 void Start()
@@ -29,7 +29,7 @@ void Start()
      videoplayer = GameObject.Find ("VideoPlayer");
      videoplayer.SetActive(false);
      trigger = true;
-     _skipVideo = true;
+     //_skipVideo = true;
      }
 
      void Update()
