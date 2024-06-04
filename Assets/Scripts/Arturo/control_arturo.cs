@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -27,7 +28,8 @@ public class control_arturo : MonoBehaviour
     public Healthbar healthbarArturo;
     public Healthbar healthbarYerik;
     public GameObject[] ObjsCombate;
-    public GameObject[] dialogueObjs;
+    public GameObject[] ObjsDialogo;
+    public GameObject[] ObjsAbrir;
 
     public GameObject UIexploracion;
     public GameObject UIcombate;
@@ -58,6 +60,8 @@ public class control_arturo : MonoBehaviour
 
         DialogueManager = GameObject.Find ("DialogueManager");
         ObjsCombate = GameObject.FindGameObjectsWithTag ("ObjetosCombate");
+        ObjsDialogo = GameObject.FindGameObjectsWithTag ("ObjetosDialogo");
+        ObjsAbrir = GameObject.FindGameObjectsWithTag ("ObjetosAbrir");
         
 
         Yerik = GameObject.Find ("Yerik_3D");
@@ -71,6 +75,9 @@ public class control_arturo : MonoBehaviour
         //activar y desactivar el movimiento
         //SwitchModes();       
         ObjsCombate = GameObject.FindGameObjectsWithTag ("ObjetosCombate");
+        ObjsCombate = GameObject.FindGameObjectsWithTag ("ObjetosDialogo");
+        //ObjsCombate = GameObject.FindGameObjectsWithTag ("ObjetosAbrir");
+
     }
 
     public void ToggleMove()
@@ -175,8 +182,36 @@ public class control_arturo : MonoBehaviour
         Debug.Log(itemInterac);
         foreach(GameObject objs in ObjsCombate)
         {
-            objs.GetComponent<ItemPickUp>().enabled = itemInterac;
-            objs.GetComponent<Destroy_item>().enabled = itemInterac;
+            if(objs.GetComponent<ItemPickUp>() != null)
+            {
+                objs.GetComponent<ItemPickUp>().enabled = itemInterac;
+            }
+
+            if(objs.GetComponent<Destroy_item>() != null)
+            {
+                objs.GetComponent<Destroy_item>().enabled = itemInterac;
+            }
+
+            if(objs.GetComponent<DialogueTrigger>() != null)
+            {
+                objs.GetComponent<DialogueTrigger>().enabled = itemInterac;            
+            }
+        }
+        foreach(GameObject objs in ObjsDialogo)
+        {
+            if(objs.GetComponent<DialogueTrigger>() != null)
+            {
+                objs.GetComponent<DialogueTrigger>().enabled = itemInterac;            
+            }
+
+            if(objs.GetComponent<Abrir_Cerrar>() != null)
+            {
+                objs.GetComponent<Abrir_Cerrar>().enabled = itemInterac;            
+            }            
+        }
+        foreach(GameObject objs in ObjsAbrir)
+        {
+            objs.GetComponent<Abrir_Cerrar>().enabled = itemInterac;
         }
         rigidbodyArturo.isKinematic = !itemInterac;
         navMeshAgentArturo.enabled = itemInterac;
