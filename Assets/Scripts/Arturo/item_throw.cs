@@ -122,6 +122,7 @@ public class item_throw : MonoBehaviour
         //add force 
         Vector3 forceToAdd = forceDirection * throwForce + transform.up * throwUpwardForce;
 
+        proyectileRB.isKinematic = false;
         proyectileRB.AddForce(forceToAdd, ForceMode.Impulse);
 
         //totalThrows = InventoryManager.Instance.Items[contador].numThrow;

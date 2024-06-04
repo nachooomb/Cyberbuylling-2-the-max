@@ -40,21 +40,11 @@ public class yerik : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (VidaArturo > 0 )
+        if (VidaArturo > 0 && VidaYerik > 0)
         {
             StartCoroutine(Ataque());
         }
         //QuitarVida();
-        if (VidaYerik <= 0)
-        {
-            textofinal.SetActive(true);
-            Debug.Log("Vida = 0 elegir final");
-            if (_animatorYerik.GetBool("die 0") == false)
-            {
-                _animatorYerik.SetTrigger("die");
-                _animatorYerik.SetBool("die 0", true);
-            }
-        }
 
         //Debug.Log("Contador yerik" + _contador);
         if (_contador == InventoryManager.Instance.Items.Count)
@@ -94,6 +84,7 @@ public class yerik : MonoBehaviour
         {
             VidaArturo = VidaArturo- 5;
             _animatorArturo.SetTrigger("hit");
+            _animatorArturo.SetTrigger("fight");
             CooldownATK =! CooldownATK;
             yield return new WaitForSeconds(6.0f);
             CooldownATK =! CooldownATK;
@@ -107,6 +98,28 @@ public class yerik : MonoBehaviour
         QuitarVida();
         _healthbar.UpdateHealthBar(100, VidaYerik);
         _animatorYerik.SetTrigger("hit");
+        if (VidaYerik <= 0)
+        {
+            //Debug.Log("Vida = 0 elegir final");
+            _animatorYerik.SetBool("fight 0", true);
+            if (_animatorYerik.GetBool("die 0") == false)
+            {
+                _animatorYerik.SetTrigger("die");
+                _animatorYerik.SetBool("die 0", true);
+            }
+
+            _animatorArturo.SetTrigger("idle");
+
+
+            //apagar controles
+
+            textofinal.SetActive(true);
+        }
+        if (_animatorYerik.GetBool("fight 0") == false)
+        {
+            _animatorYerik.SetTrigger("fight");
+        }
+        
     }
 
     void QuitarVida()

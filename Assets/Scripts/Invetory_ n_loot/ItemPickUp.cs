@@ -36,12 +36,12 @@ public class ItemPickUp : MonoBehaviour
         if(clickAndMove.distanciaObjeto == 0){ return;}
 
 
-                if(clickAndMove.distanciaObjeto <= 0.1f){
-                    PickUp();
-                    dialogueTrigger.TriggerDialogue();
-
-                    //yield return null;
-                }
+        if(clickAndMove.distanciaObjeto <= 0.1f)
+            {
+                PickUp();
+                dialogueTrigger.TriggerDialogue();
+                HePinchao=false;
+            }
             //Debug.Log(clickAndMove.distanciaObjeto);
             
             
@@ -51,8 +51,7 @@ public class ItemPickUp : MonoBehaviour
     void PickUp()
     {
         InventoryManager.Instance.AddItem(Item);
-        Destroy(gameObject);
-        
+        Destroy(gameObject); 
     }
 
     private void OnMouseDown()
@@ -60,46 +59,7 @@ public class ItemPickUp : MonoBehaviour
         GoDestinationPickUP(transform.position);
 
         HePinchao = true;
-
-        //StartCoroutine(ArturoFF());
-        
-        // if(ArturoNavMesh.remainingDistance>=0.1){
-        //     //ArturoAnim.SetBool("walkb", true);
-        //     Debug.Log("ando");
-        // }else if (ArturoNavMesh.remainingDistance<0.1){
-        //     ArturoAnim.SetBool("walkb", false);
-        //     dialogueTrigger.TriggerDialogue();
-        //     PickUp();
-        //     Debug.Log("dejo de andar y pillo el objeto");
-        // }
-        //Debug.Log( "hola");
     }
-//corrutina
-    //InventoryManager.cs.metaIEnumerator ArturoFF()
-    //{
-        // for(;;){
-        //     if(clickAndMove.distanciaObjeto != 0){
-        //         if(clickAndMove.distanciaObjeto <= 0.5f){
-        //             PickUp();
-        //             yield return null;
-        //         }
-        //     Debug.Log(clickAndMove.distanciaObjeto);
-            
-        //     }
-        // }
-        
-
-        // yield return new WaitForSeconds(1f);
-        // Debug.Log(clickAndMove.distanciaObjeto);
-        // while(clickAndMove.distanciaObjeto<0.1)
-        // {
-        //     yield return null;
-        // }
-
-        // PickUp();
-        
-
-    //}
 
      public void GoDestinationPickUP(Vector3 destinationPoint) 
     {

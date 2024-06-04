@@ -59,6 +59,7 @@ public class InventoryManager : MonoBehaviour
         }
      } 
 
+/////////////mision
      public void ableToFigth()
      {
         _control_arturo.SwitchModes();

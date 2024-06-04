@@ -14,6 +14,7 @@ GameObject primertexto;
 GameObject uicombate;
 GameObject textofinal;
 bool trigger;
+bool _skipVideo;
 
  
 void Start()
@@ -28,6 +29,7 @@ void Start()
      videoplayer = GameObject.Find ("VideoPlayer");
      videoplayer.SetActive(false);
      trigger = true;
+     _skipVideo = true;
      }
 
      void Update()
@@ -36,6 +38,13 @@ void Start()
           {
               Empezarelvideo();
                trigger = false;
+          }
+          if (Input.GetKeyDown(KeyCode.Escape) && _skipVideo == true)
+          {
+               vid.enabled = false;
+               FinIntro(vid);
+               _skipVideo = false;
+               Debug.Log("skip video");
           }
      }
 
@@ -46,9 +55,10 @@ public void Empezarelvideo()
      videoplayer.SetActive(true);
      uiexploracion.SetActive(false);
      vid.loopPointReached += FinIntro;
+    
 }
 
-public void FinIntro(UnityEngine.Video.VideoPlayer vp)
+public void FinIntro(VideoPlayer vp)
 {
      print  ("Video Is Over");
      video.SetActive(false);
@@ -59,14 +69,14 @@ public void FinIntro(UnityEngine.Video.VideoPlayer vp)
  
 public void FinalMalo()
 {
-      vid.clip = videoclips[1];
-      video.SetActive(true);
+     vid.clip = videoclips[1];
+     video.SetActive(true);
      videoplayer.SetActive(true);
      uicombate.SetActive(false);
      textofinal.SetActive(false);
      //vid.loopPointReached += FinFinalMalo;
 }
-public void FinFinalMalo(UnityEngine.Video.VideoPlayer vp2)
+public void FinFinalMalo(VideoPlayer vp2)
 {
      Debug.Log("Se acabo mal");
 }
@@ -80,7 +90,7 @@ public void FinalBueno()
      textofinal.SetActive(false);
      //vid.loopPointReached += FinFinalBueno;
 }
-public void FinFinalBueno(UnityEngine.Video.VideoPlayer vp3)
+public void FinFinalBueno(VideoPlayer vp3)
 {
      Debug.Log("Se acabo bien");
 }
