@@ -17,6 +17,10 @@ public class CameraManager : MonoBehaviour
     public static void SwitchCamera (CinemachineVirtualCamera newCamera)
     {
         newCamera.Priority = 10;
+        if (newCamera.name == "camara_salon")
+        {
+            newCamera.Priority = 5;
+        }        
         ActiveCamera = newCamera;
 
         foreach (CinemachineVirtualCamera cam in cameras)
